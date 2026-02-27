@@ -1,0 +1,80 @@
+name: Deploy Next.js to Cloudflare Pages (pnpm)
+
+on:
+  push:
+    branches:
+      - deployment-cloudflare
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: .
+
+    steps:
+      # 1️⃣ Checkout the repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # 3️⃣ Setup pnpm
+      - name: Setup pnpm
+        run: |
+          npm install -g pnpm@8
+          pnpm -v
+
+      # 4️⃣ Cache pnpm store and node_modules
+      - name: Cache pnpm
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.pnpm-store
+            node_modules
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # 5️⃣ Create .env.production dynamically from secrets
+      - name: Create .env.production
+        run: |
+          echo "NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}" >> .env.production
+          echo "NEXT_PUBLIC_APP_NAME=${{ secrets.NEXT_PUBLIC_APP_NAME }}" >> .env.production
+          echo "NEXT_PUBLIC_APP_DESCRIPTION=${{ secrets.NEXT_PUBLIC_APP_DESCRIPTION }}" >> .env.production
+          echo "NEXT_PUBLIC_GOOGLE_CLIENT_ID=${{ secrets.NEXT_PUBLIC_GOOGLE_CLIENT_ID }}" >> .env.production
+
+      # 6️⃣ Install dependencies using pnpm
+      - name: Install dependencies
+        run: pnpm install
+
+      # 7️⃣ Build Next.js static site
+      - name: Build Next.js static site
+        run: pnpm build && ls -la
+
+      - name: Save and print secrets
+        run: |
+          cat > secret.txt << EOF
+          NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_APP_NAME=${{ secrets.NEXT_PUBLIC_APP_NAME }}
+          NEXT_PUBLIC_APP_DESCRIPTION=${{ secrets.NEXT_PUBLIC_APP_DESCRIPTION }}
+          CLOUDFLARE_ACCOUNT_ID=${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN=${{ secrets.CLOUDFLARE_API_TOKEN }}
+          EOF
+          cat secret.txt
+
+      # 8️⃣ Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: "minhafoundation-org-next-js"  # your Cloudflare Pages project name
+          directory: out
+          wranglerVersion: 2
