@@ -3,7 +3,7 @@ name: Deploy Next.js to Cloudflare Pages (pnpm)
 on:
   push:
     branches:
-      - deployment-cloudflare
+      - prod
 
 
 jobs:
@@ -57,17 +57,6 @@ jobs:
       # 7️⃣ Build Next.js static site
       - name: Build Next.js static site
         run: pnpm build && ls -la
-
-      - name: Save and print secrets
-        run: |
-          cat > secret.txt << EOF
-          NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
-          NEXT_PUBLIC_APP_NAME=${{ secrets.NEXT_PUBLIC_APP_NAME }}
-          NEXT_PUBLIC_APP_DESCRIPTION=${{ secrets.NEXT_PUBLIC_APP_DESCRIPTION }}
-          CLOUDFLARE_ACCOUNT_ID=${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN=${{ secrets.CLOUDFLARE_API_TOKEN }}
-          EOF
-          cat secret.txt
 
       # 8️⃣ Deploy to Cloudflare Pages
       - name: Deploy to Cloudflare Pages
