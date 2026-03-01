@@ -7,7 +7,7 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "serve": "serve out",
+    "serve": "npx serve@latest out",
     "lint": "eslint"
   },
   "dependencies": {
