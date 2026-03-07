@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "../assets/img/logo.png";
 import type { Locale } from "@/lib/i18n-config";
-import type { Dictionary } from "@/lib/get-dictionary";
+import type { CommonDictionary } from "@/lib/get-dictionary";
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./language-switcher";
 
 interface HeaderProps {
     lang: Locale;
-    dictionary: Dictionary;
+    dictionary: CommonDictionary;
 }
 
 export default function Header({ lang, dictionary }: HeaderProps) {

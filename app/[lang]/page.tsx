@@ -1,5 +1,5 @@
 import { i18n, type Locale } from "@/lib/i18n-config";
-import { getDictionary } from "@/lib/get-dictionary";
+import { getHomeDictionary } from "@/lib/get-dictionary";
 import Banner from "@/components/home/banner";
 
 // Generate static params for all locales
@@ -14,14 +14,14 @@ export default async function Home({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const dictionary = await getDictionary(locale);
+  const homeDict = await getHomeDictionary(locale);
 
   return (
     <>
-      <Banner lang={locale} dictionary={dictionary} />
+      <Banner lang={locale} dictionary={homeDict} />
 
       <h1>
-        {dictionary.home.heading}
+        {homeDict.heading}
       </h1>
     </>
   );

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
-import { getDictionary } from "@/lib/get-dictionary";
+import { getCommonDictionary } from "@/lib/get-dictionary";
 import Header from "@/components/header";
 import HtmlLangUpdater from "@/components/html-lang-updater";
 
@@ -20,7 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const dictionary = await getDictionary(locale);
+  const commonDict = await getCommonDictionary(locale);
 
   // Build hreflang alternates for SEO
   const languages: Record<string, string> = {};
@@ -29,8 +29,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: dictionary.metadata.title,
-    description: dictionary.metadata.description,
+    title: commonDict.metadata.title,
+    description: commonDict.metadata.description,
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages,
@@ -47,12 +47,12 @@ export default async function LangLayout({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const dictionary = await getDictionary(locale);
+  const commonDict = await getCommonDictionary(locale);
 
   return (
     <>
       <HtmlLangUpdater lang={locale} />
-      <Header lang={locale} dictionary={dictionary} />
+      <Header lang={locale} dictionary={commonDict} />
       {children}
     </>
   );

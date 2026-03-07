@@ -1,9 +1,9 @@
 import type { Locale } from "@/lib/i18n-config";
-import type { Dictionary } from "@/lib/get-dictionary";
+import type { HomeDictionary } from "@/lib/get-dictionary";
 
 interface BannerProps {
   lang: Locale;
-  dictionary: Dictionary;
+  dictionary: HomeDictionary;
 }
 
 export default function Banner({ lang: _lang, dictionary }: BannerProps) {
@@ -15,8 +15,8 @@ export default function Banner({ lang: _lang, dictionary }: BannerProps) {
       className="h-[500px] bg-cover bg-center" 
       style={{ backgroundImage: `url('${bgImage}')` }}
     >
-      <h1 className="text-white">{dictionary.home.banner.title}</h1>
-      <p className="text-white">{dictionary.home.banner.subtitle}</p>
+      <h1 className="text-white">{dictionary.banner.title}</h1>
+      <p className="text-white">{dictionary.banner.subtitle}</p>
     </section>
   );
 }

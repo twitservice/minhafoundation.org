@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "title": "Minha Foundation",
+    "description": "Plan for Akhirah"
+  },
+  "header": {
+    "donate": "Donate",
+    "login": "Login",
+    "menu": [
+      { "name": "Home", "url": "/" },
+      { "name": "About Us", "url": "/about" },
+      { "name": "Activities", "url": "/activities" },
+      { "name": "Gallery", "url": "/gallery" },
+      { "name": "Connect With Us", "url": "/connect" },
+      { "name": "Blogs", "url": "/blogs" },
+      { "name": "Notice", "url": "/notice" },
+      { "name": "Contact", "url": "/contact" }
+    ]
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred"
+  }
+}

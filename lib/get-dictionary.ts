@@ -9,15 +9,8 @@ export interface MenuItem {
   url: string;
 }
 
-// Page content type (reusable for all pages)
-export interface PageContent {
-  title: string;
-  description: string;
-  content: string;
-}
-
-// Dictionary type - extend this as you add more translations
-export interface Dictionary {
+// Common dictionary (header, metadata, shared content)
+export interface CommonDictionary {
   metadata: {
     title: string;
     description: string;
@@ -27,42 +20,65 @@ export interface Dictionary {
     login: string;
     menu: MenuItem[];
   };
-  home: {
-    banner: {
-      title: string;
-      subtitle: string;
-    };
-    heading: string;
-  };
-  about: PageContent;
-  activities: PageContent;
-  gallery: PageContent;
-  connect: PageContent;
-  blogs: PageContent;
-  notice: PageContent;
-  contact: PageContent;
   common: {
     loading: string;
     error: string;
   };
 }
 
-// Cache for dictionaries to avoid re-reading files
-const dictionaries: Record<string, Dictionary> = {};
+// Home page dictionary
+export interface HomeDictionary {
+  title: string;
+  description: string;
+  banner: {
+    title: string;
+    subtitle: string;
+  };
+  heading: string;
+}
 
-export async function getDictionary(locale: Locale): Promise<Dictionary> {
+// Generic page dictionary (about, activities, gallery, etc.)
+export interface PageDictionary {
+  title: string;
+  description: string;
+  content: string;
+}
+
+// Page type union
+export type PageName = 'common' | 'home' | 'about' | 'activities' | 'gallery' | 'connect' | 'blogs' | 'notice' | 'contact' | 'donate' | 'login';
+
+// Cache for page dictionaries to avoid re-reading files
+const dictionaryCache: Record<string, unknown> = {};
+
+// Get page-specific dictionary
+export async function getDictionary<T = PageDictionary>(
+  locale: Locale,
+  page: PageName
+): Promise<T> {
+  const cacheKey = `${locale}/${page}`;
+  
   // Return cached dictionary if available
-  if (dictionaries[locale]) {
-    return dictionaries[locale];
+  if (dictionaryCache[cacheKey]) {
+    return dictionaryCache[cacheKey] as T;
   }
 
-  // Read from public/cdn/dictionaries during build time
-  const filePath = path.join(process.cwd(), 'public', 'cdn', 'dictionaries', `${locale}.json`);
+  // Read from public/cdn/dictionaries/[lang]/[page].json during build time
+  const filePath = path.join(process.cwd(), 'public', 'cdn', 'dictionaries', locale, `${page}.json`);
   const fileContents = fs.readFileSync(filePath, 'utf8');
-  const dictionary: Dictionary = JSON.parse(fileContents);
+  const dictionary = JSON.parse(fileContents) as T;
 
   // Cache the dictionary
-  dictionaries[locale] = dictionary;
+  dictionaryCache[cacheKey] = dictionary;
 
   return dictionary;
+}
+
+// Convenience function to get common dictionary
+export async function getCommonDictionary(locale: Locale): Promise<CommonDictionary> {
+  return getDictionary<CommonDictionary>(locale, 'common');
+}
+
+// Convenience function to get home dictionary
+export async function getHomeDictionary(locale: Locale): Promise<HomeDictionary> {
+  return getDictionary<HomeDictionary>(locale, 'home');
 }

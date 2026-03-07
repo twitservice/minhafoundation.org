@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
-import { getDictionary } from "@/lib/get-dictionary";
+import { getDictionary, type PageDictionary } from "@/lib/get-dictionary";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
 
@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const dictionary = await getDictionary(locale);
+  const pageDict = await getDictionary<PageDictionary>(locale, 'about');
 
   // Build hreflang alternates for this page
   const languages: Record<string, string> = {};
@@ -26,8 +26,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: dictionary.about.title,
-    description: dictionary.about.description,
+    title: pageDict.title,
+    description: pageDict.description,
     alternates: {
       canonical: `${baseUrl}/${locale}/about`,
       languages,
@@ -42,11 +42,11 @@ export default async function About({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const dictionary = await getDictionary(locale);
+  const pageDict = await getDictionary<PageDictionary>(locale, 'about');
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      {dictionary.about.content}
+      {pageDict.content}
     </div>
   );
 }

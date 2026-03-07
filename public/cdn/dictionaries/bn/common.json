@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "title": "মিনহা ফাউন্ডেশন",
+    "description": "আখিরাতের জন্য পরিকল্পনা"
+  },
+  "header": {
+    "donate": "দান করুন",
+    "login": "লগইন",
+    "menu": [
+      { "name": "হোম", "url": "/" },
+      { "name": "আমাদের সম্পর্কে", "url": "/about" },
+      { "name": "কার্যক্রম", "url": "/activities" },
+      { "name": "গ্যালারি", "url": "/gallery" },
+      { "name": "আমাদের সাথে যুক্ত হন", "url": "/connect" },
+      { "name": "ব্লগ", "url": "/blogs" },
+      { "name": "নোটিশ", "url": "/notice" },
+      { "name": "যোগাযোগ", "url": "/contact" }
+    ]
+  },
+  "common": {
+    "loading": "লোড হচ্ছে...",
+    "error": "একটি ত্রুটি ঘটেছে"
+  }
+}
