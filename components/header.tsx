@@ -7,6 +7,7 @@ import Logo from "../assets/img/logo.png";
 import type { Locale } from "@/lib/i18n-config";
 import type { Dictionary } from "@/lib/get-dictionary";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./language-switcher";
 
 interface HeaderProps {
     lang: Locale;
@@ -77,26 +78,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                             </Link>
 
                             {/* Language Switcher */}
-                            <div className="flex items-center border border-border rounded-full overflow-hidden">
-                                <Link
-                                    href={pathname.replace(`/${lang}`, '/en')}
-                                    prefetch={false}
-                                    className={`px-3 py-1.5 text-sm font-medium transition-colors ${
-                                        lang === 'en' ? 'bg-primary text-white' : 'text-secondary-text hover:bg-gray-100'
-                                    }`}
-                                >
-                                    EN
-                                </Link>
-                                <Link
-                                    href={pathname.replace(`/${lang}`, '/bn')}
-                                    prefetch={false}
-                                    className={`px-3 py-1.5 text-sm font-medium transition-colors ${
-                                        lang === 'bn' ? 'bg-primary text-white' : 'text-secondary-text hover:bg-gray-100'
-                                    }`}
-                                >
-                                    BN
-                                </Link>
-                            </div>
+                            <LanguageSwitcher currentLang={lang} variant="desktop" />
                         </div>
 
                         {/* Mobile Right Section */}
@@ -111,26 +93,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                             </Link>
 
                             {/* Language Switcher - Mobile */}
-                            <div className="flex items-center border border-border rounded-full overflow-hidden">
-                                <Link
-                                    href={pathname.replace(`/${lang}`, '/en')}
-                                    prefetch={false}
-                                    className={`px-2 py-1 text-xs font-medium transition-colors ${
-                                        lang === 'en' ? 'bg-primary text-white' : 'text-secondary-text'
-                                    }`}
-                                >
-                                    EN
-                                </Link>
-                                <Link
-                                    href={pathname.replace(`/${lang}`, '/bn')}
-                                    prefetch={false}
-                                    className={`px-2 py-1 text-xs font-medium transition-colors ${
-                                        lang === 'bn' ? 'bg-primary text-white' : 'text-secondary-text'
-                                    }`}
-                                >
-                                    BN
-                                </Link>
-                            </div>
+                            <LanguageSwitcher currentLang={lang} variant="mobile" />
 
                             {/* Hamburger Menu Button */}
                             <button

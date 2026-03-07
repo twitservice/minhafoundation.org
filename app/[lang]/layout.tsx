@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 import Header from "@/components/header";
+import HtmlLangUpdater from "@/components/html-lang-updater";
 
 // Base URL for canonical/hreflang (set in env or hardcode)
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
@@ -49,14 +50,10 @@ export default async function LangLayout({
   const dictionary = await getDictionary(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className="antialiased" suppressHydrationWarning>
-        <Header lang={locale} dictionary={dictionary} />
-        {children}
-      </body>
-    </html>
+    <>
+      <HtmlLangUpdater lang={locale} />
+      <Header lang={locale} dictionary={dictionary} />
+      {children}
+    </>
   );
 }
