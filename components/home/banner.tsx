@@ -7,8 +7,7 @@ interface BannerProps {
 }
 
 export default function Banner({ lang: _lang, dictionary }: BannerProps) {
-  const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL;
-  const bgImage = `${cdnUrl}/assets/img/minhafoundation-slider-01.webp`;
+  const bgImage = `${dictionary.banner.bg_image}`;
 
   return (
     <section 
