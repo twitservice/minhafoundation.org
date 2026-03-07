@@ -1,5 +1,5 @@
 import type { Locale } from "@/lib/i18n-config";
-import type { HomeDictionary } from "@/lib/get-dictionary";
+import type { HomeDictionary } from "@/lib/types/home";
 
 interface BannerProps {
   lang: Locale;

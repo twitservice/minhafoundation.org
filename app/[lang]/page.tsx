@@ -1,5 +1,6 @@
 import { i18n, type Locale } from "@/lib/i18n-config";
-import { getHomeDictionary } from "@/lib/get-dictionary";
+import { getDictionary } from "@/lib/get-dictionary";
+import type { HomeDictionary } from "@/lib/types/home";
 import Banner from "@/components/home/banner";
 
 // Generate static params for all locales
@@ -14,7 +15,7 @@ export default async function Home({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const homeDict = await getHomeDictionary(locale);
+  const homeDict = await getDictionary<HomeDictionary>(locale, 'home');
 
   return (
     <>
