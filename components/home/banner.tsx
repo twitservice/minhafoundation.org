@@ -1,4 +1,12 @@
-export default function Banner() {
+import type { Locale } from "@/lib/i18n-config";
+import type { Dictionary } from "@/lib/get-dictionary";
+
+interface BannerProps {
+  lang: Locale;
+  dictionary: Dictionary;
+}
+
+export default function Banner({ lang: _lang, dictionary }: BannerProps) {
   const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL;
   const bgImage = `${cdnUrl}/assets/img/minhafoundation-slider-01.webp`;
 
@@ -7,7 +15,8 @@ export default function Banner() {
       className="h-[500px] bg-cover bg-center" 
       style={{ backgroundImage: `url('${bgImage}')` }}
     >
-      <h1 className="text-white">Minha Foundation</h1>
+      <h1 className="text-white">{dictionary.home.banner.title}</h1>
+      <p className="text-white">{dictionary.home.banner.subtitle}</p>
     </section>
   );
 }

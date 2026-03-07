@@ -1,17 +1,7 @@
-// import Image from "next/image";
+import { redirect } from 'next/navigation';
+import { i18n } from '@/lib/i18n-config';
 
-import Banner from "@/components/home/banner";
-
-
-export default function Home() {
-  return (
-    <>
-
-      <Banner />
-
-      <h1>
-        Home Page Minha Foundation - Coming Soon
-      </h1>
-    </>
-  );
+// Root page redirects to default locale
+export default function RootPage() {
+  redirect(`/${i18n.defaultLocale}`);
 }

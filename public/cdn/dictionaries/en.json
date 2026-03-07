@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Minha Foundation",
+    "description": "Plan for Akhirah"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "banner": {
+      "title": "Minha Foundation",
+      "subtitle": "Building a better future together"
+    },
+    "heading": "Home Page Minha Foundation - Coming Soon"
+  },
+  "about": {
+    "title": "About Page",
+    "description": "Plan for Akhirah",
+    "content": "About Page Minha Foundation"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred"
+  }
+}
