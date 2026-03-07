@@ -1,7 +1,15 @@
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
-import type { HomeDictionary } from "@/lib/types/home";
-import Banner from "@/components/home/banner";
+import Banner, { type BannerData } from "@/components/home/banner";
+
+interface HomeDictionary {
+  title: string;
+  description: string;
+  banner: BannerData;
+  heading: string;
+}
+
+
 
 // Generate static params for all locales
 export async function generateStaticParams() {
@@ -19,7 +27,7 @@ export default async function Home({
 
   return (
     <>
-      <Banner lang={locale} dictionary={homeDict} />
+      <Banner lang={locale} dictionary={homeDict.banner} />
 
       <h1>
         {homeDict.heading}
