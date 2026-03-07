@@ -23,7 +23,7 @@ export default function Banner({ lang: _lang, dictionary }: BannerProps) {
       />
       {/* Content */}
       <div className="relative z-20">
-        <h1 className="text-white">{dictionary.banner.title}</h1>
+        <h1 className="text-primary">{dictionary.banner.title}</h1>
         <p className="text-white">{dictionary.banner.subtitle}</p>
       </div>
     </section>
