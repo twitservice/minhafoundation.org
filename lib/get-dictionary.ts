@@ -3,6 +3,19 @@ import fs from 'fs';
 import path from 'path';
 import type { Locale } from './i18n-config';
 
+// Menu item type
+export interface MenuItem {
+  name: string;
+  url: string;
+}
+
+// Page content type (reusable for all pages)
+export interface PageContent {
+  title: string;
+  description: string;
+  content: string;
+}
+
 // Dictionary type - extend this as you add more translations
 export interface Dictionary {
   metadata: {
@@ -10,9 +23,9 @@ export interface Dictionary {
     description: string;
   };
   header: {
-    home: string;
-    about: string;
-    contact: string;
+    donate: string;
+    login: string;
+    menu: MenuItem[];
   };
   home: {
     banner: {
@@ -21,11 +34,13 @@ export interface Dictionary {
     };
     heading: string;
   };
-  about: {
-    title: string;
-    description: string;
-    content: string;
-  };
+  about: PageContent;
+  activities: PageContent;
+  gallery: PageContent;
+  connect: PageContent;
+  blogs: PageContent;
+  notice: PageContent;
+  contact: PageContent;
   common: {
     loading: string;
     error: string;
