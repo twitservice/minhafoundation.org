@@ -14,7 +14,18 @@
   --secondary: #8B0836;
   --secondary-text: #62748E;
   --secondary-light: #FFC9C9;
+}
 
+/* English font mapping */
+html[lang='en'] {
+  --font-heading: var(--font-primary-en);
+  --font-body: var(--font-secondary-en);
+}
+
+/* Bengali font mapping */
+html[lang='bn'] {
+  --font-heading: var(--font-bengali);
+  --font-body: var(--font-bengali);
 }
 
 @theme inline {
@@ -32,8 +43,30 @@
   --color-secondary-text: var(--secondary-text);
   --color-secondary-light: var(--secondary-light);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Font families */
+  --font-primary-en: var(--font-primary-en);
+  --font-secondary-en: var(--font-secondary-en);
+  --font-bengali: var(--font-bengali);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  /* Typography scale from Figma */
+  --text-h1: 80px;
+  --text-h1--line-height: 72px;
+  --text-h2: 48px;
+  --text-h2--line-height: 64px;
+  --text-h3: 36px;
+  --text-h3--line-height: 48px;
+  --text-h4: 24px;
+  --text-h4--line-height: 32px;
+  --text-h5: 20px;
+  --text-h5--line-height: 28px;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 27px;
+  --text-body: 16px;
+  --text-body--line-height: 24px;
+  --text-caption: 14px;
+  --text-caption--line-height: 21px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,5 +90,54 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Typography utility classes */
+.text-h1 {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 80px;
+  line-height: 72px;
+}
+
+.text-h2 {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.text-h3 {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.text-h4 {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.text-h5 {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.text-body-lg {
+  font-family: var(--font-body), sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.text-body {
+  font-family: var(--font-body), sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-caption {
+  font-family: var(--font-body), sans-serif;
+  font-size: 14px;
+  line-height: 21px;
 }

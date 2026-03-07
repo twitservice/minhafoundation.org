@@ -31,6 +31,7 @@ export interface HomeDictionary {
   title: string;
   description: string;
   banner: {
+    bg_image: string;
     title: string;
     subtitle: string;
   };
