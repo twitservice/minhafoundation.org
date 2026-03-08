@@ -20,5 +20,48 @@
   "common": {
     "loading": "লোড হচ্ছে...",
     "error": "একটি ত্রুটি ঘটেছে"
+  },
+  "footer": {
+    "about_text": "এটি একটি অরাজনৈতিক ও মানবকল্যাণমুখী বেসরকারি সংস্থা যা সমাজের সুবিধাবঞ্চিত ও অনগ্রসর জনগোষ্ঠীর আর্থ-সামাজিক অবস্থার উন্নয়নের মাধ্যমে জাতীয় উন্নয়নে অবদান রাখতে নিবেদিত।",
+    "quick_links": [
+      {
+        "title": "মেনু",
+        "links": [
+          { "name": "আমাদের সম্পর্কে", "url": "/about" },
+          { "name": "প্রকল্পসমূহ", "url": "/activities" },
+          { "name": "ব্লগ", "url": "/blogs" },
+          { "name": "গ্যালারি", "url": "/gallery" }
+        ]
+      },
+      {
+        "title": "কানেক্ট",
+        "links": [
+          { "name": "নিয়মিত দাতা", "url": "/donate" },
+          { "name": "আজীবন দাতা", "url": "/donate" },
+          { "name": "স্বেচ্ছাসেবক", "url": "/connect" },
+          { "name": "ক্যারিয়ার", "url": "/connect" }
+        ]
+      },
+      {
+        "title": "অন্যান্য",
+        "links": [
+          { "name": "নোটিশ", "url": "/notice" },
+          { "name": "আমাদের সাথে যুক্ত হন", "url": "/connect" },
+          { "name": "শর্তাবলী", "url": "/about" },
+          { "name": "গোপনীয়তা নীতি", "url": "/about" }
+        ]
+      }
+    ],
+    "contact_info": {
+      "address": "৬ ডাকেট স্ট্রিট, লন্ডন, E1 4LU, যুক্তরাজ্য",
+      "email": "Minhafoundation@gmail.com",
+      "phone": "+৪৪ ৭৫৭৮ ০৮৮৯৯৯"
+    },
+    "social_links": [
+      { "name": "ফেসবুক", "url": "https://facebook.com/minhafoundation", "icon": "facebook" },
+      { "name": "লিংকডইন", "url": "https://linkedin.com/company/minhafoundation", "icon": "linkedin" },
+      { "name": "ইনস্টাগ্রাম", "url": "https://instagram.com/minhafoundation", "icon": "instagram" }
+    ],
+    "copyright_text": "কপিরাইট @ ২০২৫ মিনহা ফাউন্ডেশন সর্বস্বত্ব সংরক্ষিত"
   }
 }

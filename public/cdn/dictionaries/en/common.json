@@ -20,5 +20,48 @@
   "common": {
     "loading": "Loading...",
     "error": "An error occurred"
+  },
+  "footer": {
+    "about_text": "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development through upgrading the socio-economic condition of the disadvantaged and under-privileged communities of the society.",
+    "quick_links": [
+      {
+        "title": "Menu",
+        "links": [
+          { "name": "About Us", "url": "/about" },
+          { "name": "Projects", "url": "/activities" },
+          { "name": "Blogs", "url": "/blogs" },
+          { "name": "Gallery", "url": "/gallery" }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          { "name": "Regular Donor", "url": "/donate" },
+          { "name": "Lifetime Donor", "url": "/donate" },
+          { "name": "Volunteer", "url": "/connect" },
+          { "name": "Career", "url": "/connect" }
+        ]
+      },
+      {
+        "title": "Others",
+        "links": [
+          { "name": "Notice", "url": "/notice" },
+          { "name": "Connect With Us", "url": "/connect" },
+          { "name": "Terms of Conditions", "url": "/about" },
+          { "name": "Privacy Policy", "url": "/about" }
+        ]
+      }
+    ],
+    "contact_info": {
+      "address": "6 Duckett Street, London, E1 4LU, United Kingdom, London, United Kingdom",
+      "email": "Minhafoundation@gmail.com",
+      "phone": "+44 7578 088999"
+    },
+    "social_links": [
+      { "name": "Facebook", "url": "https://facebook.com/minhafoundation", "icon": "facebook" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/company/minhafoundation", "icon": "linkedin" },
+      { "name": "Instagram", "url": "https://instagram.com/minhafoundation", "icon": "instagram" }
+    ],
+    "copyright_text": "Copyright @ 2025 as Minha Foundation All rights and reserved"
   }
 }

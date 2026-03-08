@@ -9,7 +9,27 @@ export interface MenuItem {
   url: string;
 }
 
-// Common dictionary (header, metadata, shared content)
+// Social link type (shared for footer)
+export interface SocialLink {
+  name: string;
+  url: string;
+  icon: string; // icon key: 'facebook' | 'twitter' | 'instagram' | 'linkedin'
+}
+
+// Contact info type (shared for footer)
+export interface ContactInfo {
+  address: string;
+  email: string;
+  phone: string;
+}
+
+// Quick links section type (footer columns)
+export interface QuickLinkSection {
+  title: string;
+  links: MenuItem[];
+}
+
+// Common dictionary (header, footer, metadata, shared content)
 export interface CommonDictionary {
   metadata: {
     title: string;
@@ -23,6 +43,13 @@ export interface CommonDictionary {
   common: {
     loading: string;
     error: string;
+  };
+  footer: {
+    about_text: string;
+    quick_links: QuickLinkSection[];
+    contact_info: ContactInfo;
+    social_links: SocialLink[];
+    copyright_text: string;
   };
 }
 
