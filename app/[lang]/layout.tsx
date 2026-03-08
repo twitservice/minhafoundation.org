@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getCommonDictionary } from "@/lib/get-dictionary";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import { fontVariables } from "@/app/layout";
 
 // Base URL for canonical/hreflang (set in env or hardcode)
@@ -57,6 +58,7 @@ export default async function LangLayout({
       <body className="antialiased" suppressHydrationWarning>
         <Header lang={locale} dictionary={commonDict} />
         {children}
+        <Footer lang={locale} dictionary={commonDict} />
       </body>
     </html>
   );
