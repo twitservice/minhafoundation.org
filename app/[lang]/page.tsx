@@ -7,6 +7,7 @@ import Activities from "@/components/home/activities";
 import DonationFunds from "@/components/home/donation-funds";
 import SpecialActivities from "@/components/home/special-activities";
 import Gallery from "@/components/home/gallery";
+import BlogSection from "@/components/home/blog-section";
 
 interface HomeDictionary {
   title: string;
@@ -18,6 +19,7 @@ interface HomeDictionary {
   donation_funds: any;
   special_activities: any;
   gallery: any;
+  blog: any;
 }
 
 
@@ -45,6 +47,7 @@ export default async function Home({
       <DonationFunds lang={locale} dictionary={homeDict.donation_funds} />
       <SpecialActivities lang={locale} dictionary={homeDict.special_activities} />
       <Gallery lang={locale} dictionary={homeDict.gallery} />
+      <BlogSection lang={locale} dictionary={homeDict.blog} />
     </>
   );
 }

@@ -134,5 +134,44 @@
       { "id": "g7", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+7", "alt": "Gallery image 7" },
       { "id": "g8", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+8", "alt": "Gallery image 8" }
     ]
+  },
+  "blog": {
+    "title": "Our Blog",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "see_more": "See More",
+    "posts": [
+      {
+        "id": "blog-1",
+        "slug": "impact-of-clean-water",
+        "image": "https://placehold.co/600x400/374151/cbd5e1?text=Clean+Water",
+        "title": "Impact of Clean Water on Rural Communities",
+        "description": "Discover how our clean water initiatives are transforming lives in underserved rural areas, providing safe drinking water to thousands of families.",
+        "date": "Mar 04, 2025"
+      },
+      {
+        "id": "blog-2",
+        "slug": "winter-clothes-distribution-2026",
+        "image": "https://placehold.co/600x400/374151/cbd5e1?text=Winter+Clothes",
+        "title": "Winter Clothes Distribution 2026",
+        "description": "Our annual winter clothes drive reached over 5,000 families this year, providing warmth and hope during the coldest months of the season.",
+        "date": "Feb 18, 2026"
+      },
+      {
+        "id": "blog-3",
+        "slug": "education-for-every-child",
+        "image": "https://placehold.co/600x400/374151/cbd5e1?text=Education",
+        "title": "Education for Every Child",
+        "description": "Learn about our scholarship programs and free schools that are giving underprivileged children access to quality education and a brighter future.",
+        "date": "Jan 22, 2026"
+      },
+      {
+        "id": "blog-4",
+        "slug": "food-relief-in-rural-areas",
+        "image": "https://placehold.co/600x400/374151/cbd5e1?text=Food+Relief",
+        "title": "Food Relief in Rural Areas",
+        "description": "Our food relief program has distributed essential supplies to over 10,000 families affected by natural disasters and economic hardship.",
+        "date": "Dec 10, 2025"
+      }
+    ]
   }
 }
