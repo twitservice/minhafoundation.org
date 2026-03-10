@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/static-link";
 import type { CommonDictionary } from "@/lib/get-dictionary";
 import logoImg from "@/assets/img/logo.png";
 import footerBg from "@/assets/img/footer-bg-bottom-right.png";

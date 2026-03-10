@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/static-link";
 import Logo from "../assets/img/logo.png";
 import type { Locale } from "@/lib/i18n-config";
 import type { CommonDictionary } from "@/lib/get-dictionary";
@@ -31,7 +31,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
                         <div className="flex-shrink-0">
-                            <Link href={`/${lang}`} prefetch={false}>
+                            <Link href={`/${lang}`}>
                                 <Image src={Logo} alt="Minha Foundation" width={70} height={70} className="w-auto h-14" />
                             </Link>
                         </div>
@@ -42,7 +42,6 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                                 <Link
                                     key={index}
                                     href={`/${lang}${item.url === '/' ? '' : item.url}`}
-                                    prefetch={false}
                                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                                         isActive(item.url)
                                             ? 'text-primary border-b-2 border-primary'
@@ -59,7 +58,6 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                             {/* Login Icon */}
                             <Link
                                 href={`/${lang}/login`}
-                                prefetch={false}
                                 className="w-10 h-10 rounded-full border border-secondary-light flex items-center justify-center text-secondary-text hover:bg-secondary-light transition-colors"
                                 title={dictionary.header.login}
                             >
@@ -71,7 +69,6 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                             {/* Donate Button */}
                             <Link
                                 href={`/${lang}/donate`}
-                                prefetch={false}
                                 className="px-6 py-2.5 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition-colors"
                             >
                                 {dictionary.header.donate}
@@ -86,7 +83,6 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                             {/* Donate Button - Mobile */}
                             <Link
                                 href={`/${lang}/donate`}
-                                prefetch={false}
                                 className="px-4 py-2 bg-primary text-white text-xs font-medium rounded-full hover:bg-primary/90 transition-colors"
                             >
                                 {dictionary.header.donate}
@@ -123,7 +119,6 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                                 <Link
                                     key={index}
                                     href={`/${lang}${item.url === '/' ? '' : item.url}`}
-                                    prefetch={false}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                                         isActive(item.url)
@@ -137,7 +132,6 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                             <div className="pt-4 border-t border-border">
                                 <Link
                                     href={`/${lang}/login`}
-                                    prefetch={false}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="flex items-center px-4 py-3 text-sm font-medium text-primary-text hover:bg-gray-100 rounded-lg"
                                 >
