@@ -18,7 +18,7 @@ export default function Banner({ lang: _lang, dictionary }: BannerProps) {
 
   return (
     <div 
-      className="relative h-[500px] bg-cover bg-center" 
+      className="relative h-120 md:h-220 bg-cover bg-center" 
       style={{ backgroundImage: `url('${bgImage}')` }}
     >
       {/* Gradient overlay */}
