@@ -6,5 +6,29 @@
     "title": "Minha Foundation",
     "subtitle": "Building a better future together"
   },
-  "heading": "Home Page Minha Foundation - Coming Soon"
+  "heading": "Home Page Minha Foundation - Coming Soon",
+  "services": {
+    "header": {
+      "title": "For Ummah, With Sunnah",
+      "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+      "snapshot_image": "/cdn/assets/img/services-snapshot.webp"
+    },
+    "items": [
+      {
+        "id": "dawah",
+        "title": "Da'wah",
+        "description": "Establishing and managing madrasas with an integrated syllabus of religious and general education to produce distinguished Islamic scholars and contemporary da'wah practitioners."
+      },
+      {
+        "id": "education",
+        "title": "Education",
+        "description": "Empowering the poor, providing relief and rehabilitation for flood victims, installing tube wells and water purification plants, tree plantation, distributing winter clothing."
+      },
+      {
+        "id": "service",
+        "title": "Service",
+        "description": "Online-based da'wah, writing and publishing Islamic books, conducting religious study circles, and organizing training programs and workshops for Islamic outreach."
+      }
+    ]
+  }
 }
