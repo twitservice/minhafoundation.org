@@ -1,8 +1,12 @@
 import Image from "next/image";
-import Link from "@/components/static-link";
 import type { CommonDictionary } from "@/lib/get-dictionary";
 import logoImg from "@/assets/img/logo.png";
 import footerBg from "@/assets/img/footer-bg-bottom-right.png";
+
+/** Ensure path ends with trailing slash */
+function withSlash(path: string) {
+  return path.endsWith('/') ? path : `${path}/`;
+}
 
 interface FooterProps {
   lang: string;
@@ -75,7 +79,7 @@ export default function Footer({ lang, dictionary }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.3fr] gap-8 lg:gap-6">
           {/* ── Col 1: Logo + About + Social ── */}
           <div className="flex flex-col gap-4">
-            <Link href={`/${lang}`} className="inline-block">
+            <a href={withSlash(`/${lang}`)} className="inline-block">
               <Image
                 src={logoImg}
                 alt="Minha Foundation"
@@ -84,7 +88,7 @@ export default function Footer({ lang, dictionary }: FooterProps) {
                 className="w-auto h-20 object-contain"
                 priority
               />
-            </Link>
+            </a>
             <p className="text-secondary-text text-sm leading-relaxed max-w-xs">
               {footer.about_text}
             </p>
@@ -113,12 +117,12 @@ export default function Footer({ lang, dictionary }: FooterProps) {
               <ul className="flex flex-col gap-2">
                 {section.links.map((link) => (
                   <li key={link.url + link.name}>
-                    <Link
-                      href={`/${lang}${link.url}`}
+                    <a
+                      href={withSlash(`/${lang}${link.url}`)}
                       className="text-secondary-text text-sm hover:text-primary transition-colors"
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

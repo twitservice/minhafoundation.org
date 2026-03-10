@@ -2,12 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "@/components/static-link";
 import Logo from "../assets/img/logo.png";
 import type { Locale } from "@/lib/i18n-config";
 import type { CommonDictionary } from "@/lib/get-dictionary";
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./language-switcher";
+
+/** Ensure path ends with trailing slash */
+function withSlash(path: string) {
+  return path.endsWith('/') ? path : `${path}/`;
+}
 
 interface HeaderProps {
     lang: Locale;
@@ -31,17 +35,17 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
                         <div className="flex-shrink-0">
-                            <Link href={`/${lang}`}>
+                            <a href={withSlash(`/${lang}`)}>
                                 <Image src={Logo} alt="Minha Foundation" width={70} height={70} className="w-auto h-14" />
-                            </Link>
+                            </a>
                         </div>
 
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center space-x-1">
                             {dictionary.header.menu.map((item, index) => (
-                                <Link
+                                <a
                                     key={index}
-                                    href={`/${lang}${item.url === '/' ? '' : item.url}`}
+                                    href={withSlash(`/${lang}${item.url === '/' ? '' : item.url}`)}
                                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                                         isActive(item.url)
                                             ? 'text-primary border-b-2 border-primary'
@@ -49,30 +53,30 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                                     }`}
                                 >
                                     {item.name}
-                                </Link>
+                                </a>
                             ))}
                         </nav>
 
                         {/* Desktop Right Section */}
                         <div className="hidden lg:flex items-center space-x-3">
                             {/* Login Icon */}
-                            <Link
-                                href={`/${lang}/login`}
+                            <a
+                                href={withSlash(`/${lang}/login`)}
                                 className="w-10 h-10 rounded-full border border-secondary-light flex items-center justify-center text-secondary-text hover:bg-secondary-light transition-colors"
                                 title={dictionary.header.login}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
-                            </Link>
+                            </a>
 
                             {/* Donate Button */}
-                            <Link
-                                href={`/${lang}/donate`}
+                            <a
+                                href={withSlash(`/${lang}/donate`)}
                                 className="px-6 py-2.5 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition-colors"
                             >
                                 {dictionary.header.donate}
-                            </Link>
+                            </a>
 
                             {/* Language Switcher */}
                             <LanguageSwitcher currentLang={lang} variant="desktop" />
@@ -81,12 +85,12 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                         {/* Mobile Right Section */}
                         <div className="flex lg:hidden items-center space-x-2">
                             {/* Donate Button - Mobile */}
-                            <Link
-                                href={`/${lang}/donate`}
+                            <a
+                                href={withSlash(`/${lang}/donate`)}
                                 className="px-4 py-2 bg-primary text-white text-xs font-medium rounded-full hover:bg-primary/90 transition-colors"
                             >
                                 {dictionary.header.donate}
-                            </Link>
+                            </a>
 
                             {/* Language Switcher - Mobile */}
                             <LanguageSwitcher currentLang={lang} variant="mobile" />
@@ -116,9 +120,9 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                     <div className="lg:hidden bg-background border-t border-border">
                         <nav className="px-4 py-4 space-y-2">
                             {dictionary.header.menu.map((item, index) => (
-                                <Link
+                                <a
                                     key={index}
-                                    href={`/${lang}${item.url === '/' ? '' : item.url}`}
+                                    href={withSlash(`/${lang}${item.url === '/' ? '' : item.url}`)}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                                         isActive(item.url)
@@ -127,11 +131,11 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                                     }`}
                                 >
                                     {item.name}
-                                </Link>
+                                </a>
                             ))}
                             <div className="pt-4 border-t border-border">
-                                <Link
-                                    href={`/${lang}/login`}
+                                <a
+                                    href={withSlash(`/${lang}/login`)}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="flex items-center px-4 py-3 text-sm font-medium text-primary-text hover:bg-gray-100 rounded-lg"
                                 >
@@ -139,7 +143,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                     </svg>
                                     {dictionary.header.login}
-                                </Link>
+                                </a>
                             </div>
                         </nav>
                     </div>
