@@ -24,8 +24,8 @@ export default function Services({ lang: _lang, dictionary }: ServicesProps) {
   const { header, items } = dictionary || { header: { title: "" }, items: [] };
 
   return (
-    <section className="w-full relative z-10 py-12">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="w-full relative z-10 py-12 bg-white">
+      <div className="mx-auto max-w-10/12 px-4 sm:px-6 lg:px-8">
         {/* Header + snapshot */}
         <div className="relative text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary">{header.title}</h2>
@@ -35,7 +35,7 @@ export default function Services({ lang: _lang, dictionary }: ServicesProps) {
         </div>
 
         {/* Cards grid */}
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {items.map((it) => (
             <article key={it.id ?? it.title} className="rounded-2xl bg-background p-6 shadow-sm border border-gray-100">
               <div className="flex items-start gap-4">
