@@ -47,7 +47,7 @@ export default function Activities({ lang, dictionary }: ActivitiesProps) {
   const { title, subtitle, explore_all, see_details, items } = dictionary;
 
   return (
-    <section className="w-full py-16 bg-background">
+    <section className="w-full py-16 bg-background-light">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10">
