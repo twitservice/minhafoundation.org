@@ -17,7 +17,7 @@ export default function Banner({ lang: _lang, dictionary }: BannerProps) {
   const bgImage = `${dictionary.bg_image}`;
 
   return (
-    <section 
+    <div 
       className="relative h-[500px] bg-cover bg-center" 
       style={{ backgroundImage: `url('${bgImage}')` }}
     >
@@ -33,6 +33,6 @@ export default function Banner({ lang: _lang, dictionary }: BannerProps) {
         <h1 className="text-primary">{dictionary.title}</h1>
         <p className="text-white">{dictionary.subtitle}</p>
       </div>
-    </section>
+    </div>
   );
 }

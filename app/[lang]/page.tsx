@@ -8,6 +8,7 @@ import DonationFunds from "@/components/home/donation-funds";
 import SpecialActivities from "@/components/home/special-activities";
 import Gallery from "@/components/home/gallery";
 import BlogSection from "@/components/home/blog-section";
+import JoinUs from "@/components/home/join-us";
 
 interface HomeDictionary {
   title: string;
@@ -20,6 +21,7 @@ interface HomeDictionary {
   special_activities: any;
   gallery: any;
   blog: any;
+  join_us: any;
 }
 
 
@@ -40,14 +42,17 @@ export default async function Home({
 
   return (
     <>
-      <Banner lang={locale} dictionary={homeDict.banner} />
-      <Donate lang={locale} />
+      <section className="w-full bg-white">
+        <Banner lang={locale} dictionary={homeDict.banner} />
+        <Donate lang={locale} />
+      </section>
       <Services lang={locale} dictionary={homeDict.services} />
       <Activities lang={locale} dictionary={homeDict.activities} />
       <DonationFunds lang={locale} dictionary={homeDict.donation_funds} />
       <SpecialActivities lang={locale} dictionary={homeDict.special_activities} />
       <Gallery lang={locale} dictionary={homeDict.gallery} />
       <BlogSection lang={locale} dictionary={homeDict.blog} />
+      <JoinUs lang={locale} dictionary={homeDict.join_us} />
     </>
   );
 }

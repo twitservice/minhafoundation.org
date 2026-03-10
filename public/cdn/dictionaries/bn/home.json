@@ -173,5 +173,35 @@
         "date": "ডিসেম্বর ১০, ২০২৫"
       }
     ]
+  },
+  "join_us": {
+    "title": "আমাদের সাথে যোগ দিন",
+    "subtitle": "এটি একটি অরাজনৈতিক এবং মানবকল্যাণ ভিত্তিক বেসরকারি সংস্থা।",
+    "items": [
+      {
+        "id": "regular-donor",
+        "label": "নিয়মিত দাতা",
+        "href": "donate",
+        "color": "primary"
+      },
+      {
+        "id": "donor-member",
+        "label": "দাতা সদস্য",
+        "href": "donate",
+        "color": "secondary"
+      },
+      {
+        "id": "volunteer",
+        "label": "স্বেচ্ছাসেবক",
+        "href": "connect",
+        "color": "red"
+      },
+      {
+        "id": "career",
+        "label": "ক্যারিয়ার",
+        "href": "connect",
+        "color": "lime"
+      }
+    ]
   }
 }

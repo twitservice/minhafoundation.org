@@ -12,7 +12,7 @@ export default function Donate({ lang: _lang }: DonateProps) {
     const [amount, setAmount] = useState("");
 
     return (
-        <section className="w-full relative z-20">
+        <div className="w-full relative z-20">
             <div className="mx-auto max-w-6xl z-20 px-4 sm:px-6 lg:px-8">
                 <div className="relative -mt-10 md:-mt-20">
                     <div className="rounded-2xl bg-red-200 p-6 sm:p-8 shadow-md">
@@ -72,6 +72,6 @@ export default function Donate({ lang: _lang }: DonateProps) {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

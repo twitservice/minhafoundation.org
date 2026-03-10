@@ -173,5 +173,35 @@
         "date": "Dec 10, 2025"
       }
     ]
+  },
+  "join_us": {
+    "title": "Join Us",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "items": [
+      {
+        "id": "regular-donor",
+        "label": "Regular Donor",
+        "href": "donate",
+        "color": "primary"
+      },
+      {
+        "id": "donor-member",
+        "label": "Donor Member",
+        "href": "donate",
+        "color": "secondary"
+      },
+      {
+        "id": "volunteer",
+        "label": "Volunteer",
+        "href": "connect",
+        "color": "red"
+      },
+      {
+        "id": "career",
+        "label": "Career",
+        "href": "connect",
+        "color": "lime"
+      }
+    ]
   }
 }
