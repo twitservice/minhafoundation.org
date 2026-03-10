@@ -3,7 +3,7 @@ import { i18n, type Locale } from "@/lib/i18n-config";
 import { getCommonDictionary } from "@/lib/get-dictionary";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { fontVariables } from "@/app/layout";
+import HtmlLangUpdater from "@/components/html-lang-updater";
 
 // Base URL for canonical/hreflang (set in env or hardcode)
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
@@ -51,15 +51,11 @@ export default async function LangLayout({
   const commonDict = await getCommonDictionary(locale);
 
   return (
-    <html lang={locale || "en"} suppressHydrationWarning className={fontVariables}>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className="antialiased">
-        <Header lang={locale} dictionary={commonDict} />
-        {children}
-        <Footer lang={locale} dictionary={commonDict} />
-      </body>
-    </html>
+    <>
+      <HtmlLangUpdater lang={locale} />
+      <Header lang={locale} dictionary={commonDict} />
+      {children}
+      <Footer lang={locale} dictionary={commonDict} />
+    </>
   );
 }
