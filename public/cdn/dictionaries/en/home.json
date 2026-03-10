@@ -203,5 +203,14 @@
         "color": "lime"
       }
     ]
+  },
+  "our_connection": {
+    "title": "Our Institution",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "logos": [
+      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" },
+      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" },
+      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" }
+    ]
   }
 }

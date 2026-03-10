@@ -203,5 +203,14 @@
         "color": "lime"
       }
     ]
+  },
+  "our_connection": {
+    "title": "আমাদের প্রতিষ্ঠান",
+    "subtitle": "এটি একটি অরাজনৈতিক এবং মানবকল্যাণ ভিত্তিক বেসরকারি সংস্থা।",
+    "logos": [
+      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ" },
+      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ" },
+      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ" }
+    ]
   }
 }
