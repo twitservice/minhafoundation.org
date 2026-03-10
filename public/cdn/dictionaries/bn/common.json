@@ -1,4 +1,10 @@
 {
+  "images": {
+    "logo": "/cdn/assets/img/logo.webp",
+    "footerBg": "/cdn/assets/img/footer-bg-bottom-right.webp",
+    "favicon": "/cdn/assets/img/logo.webp",
+    "ogImage": "/cdn/assets/img/logo.webp"
+  },
   "metadata": {
     "title": "মিনহা ফাউন্ডেশন",
     "description": "আখিরাতের জন্য পরিকল্পনা"

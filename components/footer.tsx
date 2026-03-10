@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CommonDictionary } from "@/lib/get-dictionary";
-import logoImg from "@/assets/img/logo.webp";
-import footerBg from "@/assets/img/footer-bg-bottom-right.webp";
+
 
 interface FooterProps {
   lang: string;
@@ -53,16 +52,18 @@ const LocationIcon = () => (
 );
 
 export default function Footer({ lang, dictionary }: FooterProps) {
-  const { footer } = dictionary;
+  const { footer, images: footer_images } = dictionary;
 
   return (
     <footer className="relative bg-background-light overflow-hidden">
       {/* ── Background mask image (bottom-right, behind content) ── */}
       <div className="pointer-events-none select-none absolute bottom-0 right-0 z-0 w-70 md:max-w-90 lg:w-120 opacity-30 lg:opacity-40">
         <Image
-          src={footerBg}
+          src={footer_images.footerBg}
           alt=""
           aria-hidden="true"
+          width={480}
+          height={480}
           className="object-contain object-bottom-right"
           sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 480px"
           priority={false}
@@ -77,7 +78,7 @@ export default function Footer({ lang, dictionary }: FooterProps) {
           <div className="flex flex-col gap-4">
             <Link href={`/${lang}`} className="inline-block">
               <Image
-                src={logoImg}
+                src={footer_images.logo}
                 alt="Minha Foundation"
                 width={100}
                 height={100}
@@ -150,14 +151,14 @@ export default function Footer({ lang, dictionary }: FooterProps) {
         {/* ── Copyright bar ── */}
         <div className="mt-10 border-t border-border pt-4 pb-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-secondary-text text-xs">
           <span>{footer.copyright_text}</span>
-          <a
-            href="https://asifulmamun.info.bd/cv"
+          {/* <a
+            href="https://asifulmamun.info.bd"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-primary transition-colors"
           >
-            Latest: asifulmamun.info.bd/cv (Docs)
-          </a>
+            Report any problem @asifulmamun
+          </a> */}
         </div>
       </div>
     </footer>

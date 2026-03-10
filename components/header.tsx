@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Logo from "../assets/img/logo.webp";
 import type { Locale } from "@/lib/i18n-config";
 import type { CommonDictionary } from "@/lib/get-dictionary";
 import { usePathname } from "next/navigation";
@@ -36,7 +35,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                         {/* Logo */}
                         <div className="flex-shrink-0">
                             <a href={withSlash(`/${lang}`)}>
-                                <Image src={Logo} alt="Minha Foundation" width={70} height={70} className="w-auto h-14" />
+                                <Image src={dictionary.images.logo} alt="Minha Foundation" width={70} height={70} className="w-auto h-14" />
                             </a>
                         </div>
 

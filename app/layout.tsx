@@ -33,6 +33,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={fontVariables}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/cdn/assets/img/logo.webp" />
+        <link rel="apple-touch-icon" href="/cdn/assets/img/logo.webp" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         {children}

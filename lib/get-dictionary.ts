@@ -31,6 +31,12 @@ export interface QuickLinkSection {
 
 // Common dictionary (header, footer, metadata, shared content)
 export interface CommonDictionary {
+  images: {
+    logo: string;
+    footerBg: string;
+    favicon: string;
+    ogImage: string;
+  };
   metadata: {
     title: string;
     description: string;
