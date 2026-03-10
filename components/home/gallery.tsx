@@ -27,17 +27,27 @@ function withSlash(path: string) {
 
 /*
  * 4-column layout, 2 images per column with specific height splits.
- * Col 1: 50/50  |  Col 2: 35/65  |  Col 3: 70/30  |  Col 4: 40/60
- * Each column has the same total height (100%).
- * Mobile: 2-col grid with equal rows. Desktop: flex columns with % heights.
+ * Desktop: Col 1: 50/50 | Col 2: 40/60 | Col 3: 60/40 | Col 4: 40/60
+ * Mobile:  2 cols per row, 2 rows of columns → Col A: 50/50, Col B: 40/60, Col C: 60/40, Col D: 40/60
+ * Each column totals 100% height.
  */
-const COLUMNS: { topPct: number; bottomPct: number }[] = [
+const DESKTOP_COLUMNS: { topPct: number; bottomPct: number }[] = [
   { topPct: 50, bottomPct: 50 },
   { topPct: 40, bottomPct: 60 },
   { topPct: 60, bottomPct: 40 },
   { topPct: 40, bottomPct: 60 },
 ];
-const COLUMN_HEIGHT = 520; // px — fixed total height on desktop
+const MOBILE_ROWS: { topPct: number; bottomPct: number }[][] = [
+  [
+    { topPct: 50, bottomPct: 50 },
+    { topPct: 40, bottomPct: 60 },
+  ],
+  [
+    { topPct: 60, bottomPct: 40 },
+    { topPct: 40, bottomPct: 60 },
+  ],
+];
+const DESKTOP_HEIGHT = 520;
 
 /* ── Lightbox ── */
 function Lightbox({
@@ -156,33 +166,51 @@ export default function Gallery({ lang, dictionary }: GalleryProps) {
             </div>
           </div>
 
-          {/* Mobile: 2-col equal grid */}
-          <div className="grid grid-cols-2 gap-3 lg:hidden">
-            {items.slice(0, 8).map((item, idx) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => openLightbox(idx)}
-                className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer h-[180px] sm:h-[220px]"
-              >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-              </button>
+          {/* Mobile / Tablet: 2-column flex rows with percentage heights */}
+          <div className="flex flex-col gap-6 lg:hidden">
+            {MOBILE_ROWS.map((row, rowIdx) => (
+              <div key={rowIdx} className="flex gap-3 h-[360px] sm:h-[400px]">
+                {row.map((col, colIdx) => {
+                  const gap = 12;
+                  const imgTopIdx = rowIdx * 4 + colIdx;
+                  const imgBottomIdx = rowIdx * 4 + colIdx + 2;
+                  const topItem = items[imgTopIdx];
+                  const bottomItem = items[imgBottomIdx];
+                  if (!topItem || !bottomItem) return null;
+                  return (
+                    <div key={colIdx} className="flex flex-col gap-3 flex-1 min-w-0">
+                      <button
+                        type="button"
+                        onClick={() => openLightbox(imgTopIdx)}
+                        className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer"
+                        style={{ height: `calc(${col.topPct}% - ${gap / 2}px)` }}
+                      >
+                        <img src={topItem.src} alt={topItem.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => openLightbox(imgBottomIdx)}
+                        className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer"
+                        style={{ height: `calc(${col.bottomPct}% - ${gap / 2}px)` }}
+                      >
+                        <img src={bottomItem.src} alt={bottomItem.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
             ))}
           </div>
 
           {/* Desktop: 4-column flex with percentage heights */}
-          <div className="hidden lg:flex gap-4" style={{ height: COLUMN_HEIGHT }}>
-            {COLUMNS.map((col, colIdx) => {
+          <div className="hidden lg:flex gap-4" style={{ height: DESKTOP_HEIGHT }}>
+            {DESKTOP_COLUMNS.map((col, colIdx) => {
               const topItem = items[colIdx];
               const bottomItem = items[colIdx + 4];
               if (!topItem || !bottomItem) return null;
-              const gap = 16; // gap in px
+              const gap = 16;
               const topH = `calc(${col.topPct}% - ${gap / 2}px)`;
               const bottomH = `calc(${col.bottomPct}% - ${gap / 2}px)`;
               return (
@@ -193,12 +221,7 @@ export default function Gallery({ lang, dictionary }: GalleryProps) {
                     className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer"
                     style={{ height: topH }}
                   >
-                    <img
-                      src={topItem.src}
-                      alt={topItem.alt}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
+                    <img src={topItem.src} alt={topItem.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </button>
                   <button
@@ -207,12 +230,7 @@ export default function Gallery({ lang, dictionary }: GalleryProps) {
                     className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer"
                     style={{ height: bottomH }}
                   >
-                    <img
-                      src={bottomItem.src}
-                      alt={bottomItem.alt}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
+                    <img src={bottomItem.src} alt={bottomItem.alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </button>
                 </div>
