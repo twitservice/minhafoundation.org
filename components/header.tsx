@@ -30,7 +30,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
 
     return (
         <>
-            <header className="absolute top-0 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-10/12 z-50 bg-background shadow-sm">
+            <header className="absolute top-0 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-10/12 z-50 bg-background shadow-sm md:rounded-xl">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
