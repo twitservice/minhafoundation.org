@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import type { Locale } from "@/lib/i18n-config";
 
 interface GalleryItem {
@@ -25,17 +25,19 @@ function withSlash(path: string) {
   return path.endsWith("/") ? path : `${path}/`;
 }
 
-/* ── Masonry layout pattern (matches screenshot: row 1 = short/short/tall/short, row 2 = tall/tall/tall/tall) ── */
-const spanMap: Record<number, string> = {
-  0: "row-span-1", // short
-  1: "row-span-1", // short
-  2: "row-span-2", // tall
-  3: "row-span-1", // short
-  4: "row-span-2", // tall
-  5: "row-span-2", // tall
-  6: "row-span-2", // tall
-  7: "row-span-2", // tall
-};
+/*
+ * 4-column layout, 2 images per column with specific height splits.
+ * Col 1: 50/50  |  Col 2: 35/65  |  Col 3: 70/30  |  Col 4: 40/60
+ * Each column has the same total height (100%).
+ * Mobile: 2-col grid with equal rows. Desktop: flex columns with % heights.
+ */
+const COLUMNS: { topPct: number; bottomPct: number }[] = [
+  { topPct: 50, bottomPct: 50 },
+  { topPct: 40, bottomPct: 60 },
+  { topPct: 60, bottomPct: 40 },
+  { topPct: 40, bottomPct: 60 },
+];
+const COLUMN_HEIGHT = 520; // px — fixed total height on desktop
 
 /* ── Lightbox ── */
 function Lightbox({
@@ -53,6 +55,17 @@ function Lightbox({
 }) {
   const item = items[index];
 
+  /* keyboard navigation */
+  useEffect(() => {
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev();
+      if (e.key === "ArrowRight") onNext();
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [onClose, onPrev, onNext]);
+
   return (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80"
@@ -62,7 +75,7 @@ function Lightbox({
       <button
         onClick={onClose}
         aria-label="Close"
-        className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition"
+        className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition cursor-pointer"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 6L6 18M6 6l12 12" />
@@ -73,7 +86,7 @@ function Lightbox({
       <button
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
         aria-label="Previous"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition cursor-pointer"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M15 18l-6-6 6-6" />
@@ -84,7 +97,7 @@ function Lightbox({
       <button
         onClick={(e) => { e.stopPropagation(); onNext(); }}
         aria-label="Next"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition cursor-pointer"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 18l6-6-6-6" />
@@ -143,14 +156,14 @@ export default function Gallery({ lang, dictionary }: GalleryProps) {
             </div>
           </div>
 
-          {/* Masonry grid: 4 columns, auto rows ~160px */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 auto-rows-[160px] sm:auto-rows-[180px] gap-4">
+          {/* Mobile: 2-col equal grid */}
+          <div className="grid grid-cols-2 gap-3 lg:hidden">
             {items.slice(0, 8).map((item, idx) => (
               <button
                 key={item.id}
                 type="button"
                 onClick={() => openLightbox(idx)}
-                className={`relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer ${spanMap[idx] ?? "row-span-1"}`}
+                className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer h-[180px] sm:h-[220px]"
               >
                 <img
                   src={item.src}
@@ -158,10 +171,53 @@ export default function Gallery({ lang, dictionary }: GalleryProps) {
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </button>
             ))}
+          </div>
+
+          {/* Desktop: 4-column flex with percentage heights */}
+          <div className="hidden lg:flex gap-4" style={{ height: COLUMN_HEIGHT }}>
+            {COLUMNS.map((col, colIdx) => {
+              const topItem = items[colIdx];
+              const bottomItem = items[colIdx + 4];
+              if (!topItem || !bottomItem) return null;
+              const gap = 16; // gap in px
+              const topH = `calc(${col.topPct}% - ${gap / 2}px)`;
+              const bottomH = `calc(${col.bottomPct}% - ${gap / 2}px)`;
+              return (
+                <div key={colIdx} className="flex flex-col gap-4 flex-1 min-w-0">
+                  <button
+                    type="button"
+                    onClick={() => openLightbox(colIdx)}
+                    className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer"
+                    style={{ height: topH }}
+                  >
+                    <img
+                      src={topItem.src}
+                      alt={topItem.alt}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => openLightbox(colIdx + 4)}
+                    className="relative rounded-2xl overflow-hidden bg-[#374151] group cursor-pointer"
+                    style={{ height: bottomH }}
+                  >
+                    <img
+                      src={bottomItem.src}
+                      alt={bottomItem.alt}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                  </button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
