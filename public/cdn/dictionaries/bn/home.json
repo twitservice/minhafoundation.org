@@ -119,5 +119,20 @@
     "description": "এটি একটি অ-রাজনৈতিক ও মানবিক কল্যাণভিত্তিক অসরকারি সংগঠন। এটি একটি অ-রাজনৈতিক ও মানবিক সংগঠন। এটি একটি অ-রাজনৈতিক সংগঠন। এটি একটি অ-রাজনৈতিক ও মানবিক।",
     "video_url": "",
     "learn_more": "আরও জানুন"
+  },
+  "gallery": {
+    "title": "আমাদের গ্যালারি",
+    "subtitle": "এটি একটি অ-রাজনৈতিক ও মানবিক কল্যাণভিত্তিক অসরকারি সংগঠন।",
+    "see_more": "আরও দেখুন",
+    "items": [
+      { "id": "g1", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+1", "alt": "গ্যালারি ছবি ১" },
+      { "id": "g2", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+2", "alt": "গ্যালারি ছবি ২" },
+      { "id": "g3", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+3", "alt": "গ্যালারি ছবি ৩" },
+      { "id": "g4", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+4", "alt": "গ্যালারি ছবি ৪" },
+      { "id": "g5", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+5", "alt": "গ্যালারি ছবি ৫" },
+      { "id": "g6", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+6", "alt": "গ্যালারি ছবি ৬" },
+      { "id": "g7", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+7", "alt": "গ্যালারি ছবি ৭" },
+      { "id": "g8", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+8", "alt": "গ্যালারি ছবি ৮" }
+    ]
   }
 }

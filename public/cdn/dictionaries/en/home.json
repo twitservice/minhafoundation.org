@@ -119,5 +119,20 @@
     "description": "It is a non-political and human welfare oriented non-and go government organization steadfast. It is a non-political and human. It is a non-political organization steadfast. It is a go non-political and human. It is a non-political.",
     "video_url": "",
     "learn_more": "Learn More"
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "see_more": "See More",
+    "items": [
+      { "id": "g1", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+1", "alt": "Gallery image 1" },
+      { "id": "g2", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+2", "alt": "Gallery image 2" },
+      { "id": "g3", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+3", "alt": "Gallery image 3" },
+      { "id": "g4", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+4", "alt": "Gallery image 4" },
+      { "id": "g5", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+5", "alt": "Gallery image 5" },
+      { "id": "g6", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+6", "alt": "Gallery image 6" },
+      { "id": "g7", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+7", "alt": "Gallery image 7" },
+      { "id": "g8", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+8", "alt": "Gallery image 8" }
+    ]
   }
 }
