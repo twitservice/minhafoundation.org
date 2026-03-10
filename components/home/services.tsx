@@ -37,7 +37,7 @@ export default function Services({ lang: _lang, dictionary }: ServicesProps) {
         {/* Cards grid */}
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (
-            <article key={it.id ?? it.title} className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100">
+            <article key={it.id ?? it.title} className="rounded-2xl bg-background p-6 shadow-sm border border-gray-100">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full bg-secondary-light flex items-center justify-center">
