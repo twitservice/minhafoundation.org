@@ -111,5 +111,13 @@
         "description": "Online-based da'wah, writing and publishing Islamic books, conducting religious study circles and outreach."
       }
     ]
+  },
+  "special_activities": {
+    "heading_prefix": "About",
+    "heading_highlight": "Minha Foundation",
+    "heading_suffix": "Special Activities",
+    "description": "It is a non-political and human welfare oriented non-and go government organization steadfast. It is a non-political and human. It is a non-political organization steadfast. It is a go non-political and human. It is a non-political.",
+    "video_url": "",
+    "learn_more": "Learn More"
   }
 }

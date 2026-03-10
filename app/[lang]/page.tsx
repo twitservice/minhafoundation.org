@@ -5,6 +5,7 @@ import Donate from "@/components/home/donate";
 import Services from "@/components/home/services";
 import Activities from "@/components/home/activities";
 import DonationFunds from "@/components/home/donation-funds";
+import SpecialActivities from "@/components/home/special-activities";
 
 interface HomeDictionary {
   title: string;
@@ -14,6 +15,7 @@ interface HomeDictionary {
   services: any;
   activities: any;
   donation_funds: any;
+  special_activities: any;
 }
 
 
@@ -39,6 +41,7 @@ export default async function Home({
       <Services lang={locale} dictionary={homeDict.services} />
       <Activities lang={locale} dictionary={homeDict.activities} />
       <DonationFunds lang={locale} dictionary={homeDict.donation_funds} />
+      <SpecialActivities lang={locale} dictionary={homeDict.special_activities} />
     </>
   );
 }
