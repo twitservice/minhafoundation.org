@@ -4,7 +4,10 @@
   "banner": {
     "bg_image": "/cdn/assets/img/minhafoundation-slider-01.webp",
     "title": "Minha Foundation",
-    "subtitle": "Building a better future together"
+    "subtitle": "Building a better future together",
+    "description": "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development through upgrading the socio-economic condition of the disadvantaged and under-privileged communities of the society. It has been working tirelessly since January 2019.",
+    "btn_learn_more": "Learn More",
+    "btn_activities": "Our Activities"
   },
   "heading": "Home Page Minha Foundation - Coming Soon",
   "services": {
