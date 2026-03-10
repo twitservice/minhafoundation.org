@@ -28,40 +28,16 @@ export default function SpecialActivities({
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
-      {/* ── Pink wave shape (top) ── */}
-      <svg
-        className="absolute top-0 left-0 w-full"
-        viewBox="0 0 1440 320"
-        preserveAspectRatio="none"
-        style={{ height: "220px" }}
-      >
-        <path
-          d="M0,320 C180,220 360,280 540,240 C720,200 900,100 1080,160 C1200,200 1340,280 1440,260 L1440,0 L0,0 Z"
-          fill="var(--secondary-light)"
-          fillOpacity="0.35"
-        />
-      </svg>
-
-      {/* ── Pink wave shape (bottom) with blob extending right ── */}
+      {/* ── Pink wave shape (bottom only) ── */}
       <svg
         className="absolute bottom-0 left-0 w-full"
-        viewBox="0 0 1440 400"
+        viewBox="0 0 1920 477"
         preserveAspectRatio="none"
-        style={{ height: "340px" }}
+        style={{ height: "clamp(200px, 30vw, 477px)" }}
       >
         <path
-          d="M0,400 L0,200 C120,280 300,100 500,180 C700,260 850,120 1020,80 C1190,40 1340,160 1440,120 L1440,400 Z"
-          fill="var(--secondary-light)"
-          fillOpacity="0.35"
-        />
-        {/* Extra blob on the right */}
-        <ellipse
-          cx="1380"
-          cy="280"
-          rx="200"
-          ry="180"
-          fill="var(--secondary-light)"
-          fillOpacity="0.3"
+          d="M1923 476.571H0V282.571C150.872 224.018 215.503 214.181 336.5 238.571C457.497 262.96 440.812 160.607 636 120.071C831.188 79.5339 888.655 219.571 1046 219.571C1203.35 219.571 1401.59 109.84 1542.5 28.0706C1655.23 -37.3447 1816.28 28.4333 1923 55.6897V476.571Z"
+          fill="#FFC9C9"
         />
       </svg>
 
