@@ -30,5 +30,48 @@
         "description": "Online-based da'wah, writing and publishing Islamic books, conducting religious study circles, and organizing training programs and workshops for Islamic outreach."
       }
     ]
+  },
+  "activities": {
+    "title": "Ongoing Activities",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "explore_all": "Explore All",
+    "see_details": "See Details",
+    "items": [
+      {
+        "id": "entrepreneur",
+        "badge": "Regular Project",
+        "image": "https://placehold.co/290x217/png",
+        "title": "Skilled Based Entrepreneur",
+        "description": "It is a non-political and human welfare oriented. It is a non-political and human welfare oriented organization steadfast."
+      },
+      {
+        "id": "relief",
+        "badge": "Regular Project",
+        "image": "https://placehold.co/290x217/png",
+        "title": "Flood Relief Program",
+        "description": "Providing relief and rehabilitation for flood victims, installing tube wells and water purification plants in affected areas."
+      },
+      {
+        "id": "education",
+        "badge": "Regular Project",
+        "image": "https://placehold.co/290x217/png",
+        "title": "Education For All",
+        "description": "Establishing and managing madrasas with an integrated syllabus of religious and general education for underprivileged children."
+      },
+      {
+        "id": "winter",
+        "badge": "Regular Project",
+        "image": "https://placehold.co/290x217/png",
+        "title": "Winter Clothing Drive",
+        "description": "Distributing winter clothing to the poor and vulnerable communities across rural and urban areas during cold seasons."
+      },
+      {
+        "id": "dawah",
+        "badge": "Regular Project",
+        "image": "https://placehold.co/290x217/png",
+        "title": "Online Da'wah Initiative",
+        "description": "Online-based da'wah, writing and publishing Islamic books, conducting religious study circles and training workshops."
+      }
+    ]
   }
 }

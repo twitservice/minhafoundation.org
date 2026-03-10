@@ -3,6 +3,7 @@ import { getDictionary } from "@/lib/get-dictionary";
 import Banner, { type BannerData } from "@/components/home/banner";
 import Donate from "@/components/home/donate";
 import Services from "@/components/home/services";
+import Activities from "@/components/home/activities";
 
 interface HomeDictionary {
   title: string;
@@ -10,6 +11,7 @@ interface HomeDictionary {
   banner: BannerData;
   heading: string;
   services: any;
+  activities: any;
 }
 
 
@@ -33,6 +35,7 @@ export default async function Home({
       <Banner lang={locale} dictionary={homeDict.banner} />
       <Donate lang={locale} />
       <Services lang={locale} dictionary={homeDict.services} />
+      <Activities lang={locale} dictionary={homeDict.activities} />
     </>
   );
 }
