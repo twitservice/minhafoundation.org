@@ -10,6 +10,7 @@ import Gallery from "@/components/home/gallery";
 import BlogSection from "@/components/home/blog-section";
 import JoinUs from "@/components/home/join-us";
 import OurConnection from "@/components/home/our-connection";
+import SubscriberSection from "@/components/home/subscriber-section";
 
 interface HomeDictionary {
   title: string;
@@ -24,6 +25,7 @@ interface HomeDictionary {
   blog: any;
   join_us: any;
   our_connection: any;
+  subscriber: any;
 }
 
 
@@ -56,6 +58,7 @@ export default async function Home({
       <BlogSection lang={locale} dictionary={homeDict.blog} />
       <JoinUs lang={locale} dictionary={homeDict.join_us} />
       <OurConnection lang={locale} dictionary={homeDict.our_connection} />
+      <SubscriberSection lang={locale} dictionary={homeDict.subscriber} />
     </>
   );
 }

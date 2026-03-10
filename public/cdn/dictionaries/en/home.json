@@ -212,5 +212,11 @@
       { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" },
       { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" }
     ]
+  },
+  "subscriber": {
+    "title": "Subscribe our newsletters",
+    "description": "It is a non-political and human welfare oriented government organization steadfast. It is a non-political.",
+    "placeholder": "Type Email",
+    "button": "Subscribe"
   }
 }
