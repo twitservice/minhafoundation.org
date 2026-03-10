@@ -12,14 +12,13 @@ export default function Donate({ lang: _lang }: DonateProps) {
     const [amount, setAmount] = useState("");
 
     return (
-        <section className="w-full relative">
-            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                <div className="relative md:-mt-20">
+        <section className="w-full relative z-20">
+            <div className="mx-auto max-w-6xl z-20 px-4 sm:px-6 lg:px-8">
+                <div className="relative -mt-10 md:-mt-20">
                     <div className="rounded-2xl bg-red-200 p-6 sm:p-8 shadow-md">
                         <h2 className="mb-4 text-center text-2xl sm:text-3xl font-bold text-primary">Quick Donate</h2>
-
-                        <form className="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-end">
-                            <div className="md:col-span-1">
+                        <form className="flex flex-col gap-4 md:flex-row md:items-end">
+                            <div className="md:flex-1">
                                 <label className="mb-2 block text-sm font-medium text-gray-700">Donation Type <span className="text-red-600">*</span></label>
                                 <select
                                     value={donationType}
@@ -32,7 +31,7 @@ export default function Donate({ lang: _lang }: DonateProps) {
                                 </select>
                             </div>
 
-                            <div className="md:col-span-2">
+                            <div className="md:flex-1">
                                 <label className="mb-2 block text-sm font-medium text-gray-700">Mobile/Email <span className="text-red-600">*</span></label>
                                 <input
                                     value={contact}
@@ -42,7 +41,7 @@ export default function Donate({ lang: _lang }: DonateProps) {
                                 />
                             </div>
 
-                            <div className="md:col-span-1">
+                            <div className="md:flex-1">
                                 <label className="mb-2 block text-sm font-medium text-gray-700">Donation Amount <span className="text-red-600">*</span></label>
                                 <input
                                     value={amount}
@@ -53,23 +52,20 @@ export default function Donate({ lang: _lang }: DonateProps) {
                                 />
                             </div>
 
-                            <div className="md:col-span-1 flex items-end">
-                                <button
-                                    type="button"
-                                    className="w-full rounded-lg bg-emerald-700 px-6 py-3 text-white shadow hover:brightness-95 md:w-auto"
-                                    onClick={() => {
-                                        if (!contact || !amount) {
-                                            alert("Please provide contact and amount.");
-                                            return;
-                                        }
-                                        alert(`Donating ${amount} (${donationType}) — contact: ${contact}`);
-                                    }}
-                                >
-                                    Donate
-                                </button>
-                            </div>
+                            <button
+                                type="button"
+                                className="rounded-lg bg-emerald-700 px-6 py-3 text-white shadow hover:brightness-95"
+                                onClick={() => {
+                                    if (!contact || !amount) {
+                                        alert("Please provide contact and amount.");
+                                        return;
+                                    }
+                                    alert(`Donating ${amount} (${donationType}) — contact: ${contact}`);
+                                }}
+                            >
+                                Donate
+                            </button>
                         </form>
-
                         <p className="mt-6 text-center text-sm text-gray-800">
                             You will receive tax relief when you donate to Minha Foundation Foundation. <a className="font-medium text-emerald-700" href="#">Click here to learn more.</a>
                         </p>
