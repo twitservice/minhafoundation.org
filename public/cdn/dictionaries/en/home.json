@@ -73,5 +73,43 @@
         "description": "Online-based da'wah, writing and publishing Islamic books, conducting religious study circles and training workshops."
       }
     ]
+  },
+  "donation_funds": {
+    "title": "Donation Funds",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "all_funds": "All Funds",
+    "donate_btn": "Donate",
+    "items": [
+      {
+        "id": "zakat",
+        "title": "Zakat Fund",
+        "description": "It is a non-political and human welfare oriented. It is a non-political and human welfare oriented non-government organization steadfast."
+      },
+      {
+        "id": "sadaqah",
+        "title": "Sadaqah Fund",
+        "description": "Voluntary charity to help the poor and needy. It is a non-political and human welfare oriented non-government organization steadfast."
+      },
+      {
+        "id": "orphan",
+        "title": "Orphan Support",
+        "description": "Supporting orphaned children with education, food, shelter and healthcare through our dedicated programs."
+      },
+      {
+        "id": "madrasa",
+        "title": "Madrasa Fund",
+        "description": "Establishing and managing madrasas with an integrated syllabus of religious and general education for scholars."
+      },
+      {
+        "id": "relief",
+        "title": "Emergency Relief",
+        "description": "Providing immediate relief during natural disasters, floods, and emergencies to affected communities."
+      },
+      {
+        "id": "dawah",
+        "title": "Da'wah Fund",
+        "description": "Online-based da'wah, writing and publishing Islamic books, conducting religious study circles and outreach."
+      }
+    ]
   }
 }
