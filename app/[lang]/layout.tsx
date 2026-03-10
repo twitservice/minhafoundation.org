@@ -32,6 +32,23 @@ export async function generateMetadata({
   return {
     title: commonDict.metadata.title,
     description: commonDict.metadata.description,
+    icons: {
+      icon: '/logo.webp',
+      apple: '/logo.webp',
+    },
+    openGraph: {
+      title: commonDict.metadata.title,
+      description: commonDict.metadata.description,
+      url: `${baseUrl}/${locale}`,
+      images: [{ url: `${baseUrl}/logo.webp`, width: 512, height: 512, alt: commonDict.metadata.title }],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: commonDict.metadata.title,
+      description: commonDict.metadata.description,
+      images: [`${baseUrl}/logo.webp`],
+    },
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages,

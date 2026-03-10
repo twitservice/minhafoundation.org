@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CommonDictionary } from "@/lib/get-dictionary";
-import logoImg from "@/assets/img/logo.png";
-import footerBg from "@/assets/img/footer-bg-bottom-right.png";
+import logoImg from "@/assets/img/logo.webp";
+import footerBg from "@/assets/img/footer-bg-bottom-right.webp";
 
 interface FooterProps {
   lang: string;

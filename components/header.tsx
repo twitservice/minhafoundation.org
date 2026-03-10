@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Logo from "../assets/img/logo.png";
+import Logo from "../assets/img/logo.webp";
 import type { Locale } from "@/lib/i18n-config";
 import type { CommonDictionary } from "@/lib/get-dictionary";
 import { usePathname } from "next/navigation";
