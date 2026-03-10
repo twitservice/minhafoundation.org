@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 
-// Local interface - only this page knows about its JSON structure
-interface AboutPageData {
+interface GalleryPageData {
   title: string;
   description: string;
   content: string;
@@ -11,12 +10,10 @@ interface AboutPageData {
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
 
-// Generate static params for all locales
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-// Generate metadata dynamically based on locale
 export async function generateMetadata({
   params,
 }: {
@@ -24,36 +21,38 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<AboutPageData>(locale, 'about');
+  const pageData = await getDictionary<GalleryPageData>(locale, 'gallery');
 
-  // Build hreflang alternates for this page
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
-    languages[loc] = `${baseUrl}/${loc}/about`;
+    languages[loc] = `${baseUrl}/${loc}/gallery`;
   }
 
   return {
     title: pageData.title,
     description: pageData.description,
     alternates: {
-      canonical: `${baseUrl}/${locale}/about`,
+      canonical: `${baseUrl}/${locale}/gallery`,
       languages,
     },
   };
 }
 
-export default async function About({
+export default async function GalleryPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<AboutPageData>(locale, 'about');
+  const pageData = await getDictionary<GalleryPageData>(locale, 'gallery');
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      {pageData.content}
+    <div className="min-h-screen bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 className="text-3xl font-bold text-primary-text mb-8">{pageData.title}</h1>
+        <p className="text-secondary-text">{pageData.content}</p>
+      </div>
     </div>
   );
 }

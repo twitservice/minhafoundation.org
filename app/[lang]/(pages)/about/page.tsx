@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 
-interface LoginPageData {
+interface AboutPageData {
   title: string;
   description: string;
   content: string;
@@ -21,39 +21,37 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<LoginPageData>(locale, 'login');
+  const pageData = await getDictionary<AboutPageData>(locale, 'about');
 
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
-    languages[loc] = `${baseUrl}/${loc}/login`;
+    languages[loc] = `${baseUrl}/${loc}/about`;
   }
 
   return {
     title: pageData.title,
     description: pageData.description,
     alternates: {
-      canonical: `${baseUrl}/${locale}/login`,
+      canonical: `${baseUrl}/${locale}/about`,
       languages,
     },
   };
 }
 
-export default async function Login({
+export default async function AboutPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<LoginPageData>(locale, 'login');
+  const pageData = await getDictionary<AboutPageData>(locale, 'about');
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center">
-      <div className="max-w-md w-full mx-auto px-4">
-        <div className="bg-white p-8 rounded-2xl shadow-sm border border-border">
-          <h1 className="text-2xl font-bold text-primary-text mb-6 text-center">{pageData.title}</h1>
-          <p className="text-secondary-text text-center">{pageData.content}</p>
-        </div>
+    <div className="min-h-screen bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 className="text-3xl font-bold text-primary-text mb-8">{pageData.title}</h1>
+        <p className="text-secondary-text">{pageData.content}</p>
       </div>
     </div>
   );

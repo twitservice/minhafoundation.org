@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 
-interface DonatePageData {
+interface NoticePageData {
   title: string;
   description: string;
   content: string;
@@ -21,31 +21,31 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<DonatePageData>(locale, 'donate');
+  const pageData = await getDictionary<NoticePageData>(locale, 'notice');
 
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
-    languages[loc] = `${baseUrl}/${loc}/donate`;
+    languages[loc] = `${baseUrl}/${loc}/notice`;
   }
 
   return {
     title: pageData.title,
     description: pageData.description,
     alternates: {
-      canonical: `${baseUrl}/${locale}/donate`,
+      canonical: `${baseUrl}/${locale}/notice`,
       languages,
     },
   };
 }
 
-export default async function Donate({
+export default async function NoticePage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<DonatePageData>(locale, 'donate');
+  const pageData = await getDictionary<NoticePageData>(locale, 'notice');
 
   return (
     <div className="min-h-screen bg-background">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 
-interface BlogsPageData {
+interface ActivitiesPageData {
   title: string;
   description: string;
   content: string;
@@ -21,31 +21,31 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<BlogsPageData>(locale, 'blogs');
+  const pageData = await getDictionary<ActivitiesPageData>(locale, 'activities');
 
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
-    languages[loc] = `${baseUrl}/${loc}/blogs`;
+    languages[loc] = `${baseUrl}/${loc}/activities`;
   }
 
   return {
     title: pageData.title,
     description: pageData.description,
     alternates: {
-      canonical: `${baseUrl}/${locale}/blogs`,
+      canonical: `${baseUrl}/${locale}/activities`,
       languages,
     },
   };
 }
 
-export default async function Blogs({
+export default async function ActivitiesPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<BlogsPageData>(locale, 'blogs');
+  const pageData = await getDictionary<ActivitiesPageData>(locale, 'activities');
 
   return (
     <div className="min-h-screen bg-background">

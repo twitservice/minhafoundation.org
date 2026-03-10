@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 
-interface ConnectPageData {
+interface LoginPageData {
   title: string;
   description: string;
   content: string;
@@ -21,31 +21,31 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<ConnectPageData>(locale, 'connect');
+  const pageData = await getDictionary<LoginPageData>(locale, 'login');
 
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
-    languages[loc] = `${baseUrl}/${loc}/connect`;
+    languages[loc] = `${baseUrl}/${loc}/login`;
   }
 
   return {
     title: pageData.title,
     description: pageData.description,
     alternates: {
-      canonical: `${baseUrl}/${locale}/connect`,
+      canonical: `${baseUrl}/${locale}/login`,
       languages,
     },
   };
 }
 
-export default async function Connect({
+export default async function LoginPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<ConnectPageData>(locale, 'connect');
+  const pageData = await getDictionary<LoginPageData>(locale, 'login');
 
   return (
     <div className="min-h-screen bg-background">
