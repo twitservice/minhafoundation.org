@@ -1,7 +1,7 @@
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 import Banner, { type BannerData } from "@/components/home/banner";
-import Donate from "@/components/home/donate";
+import Donate, { type QuickDonateData } from "@/components/home/donate";
 import Services from "@/components/home/services";
 import Activities from "@/components/home/activities";
 import DonationFunds from "@/components/home/donation-funds";
@@ -26,6 +26,7 @@ interface HomeDictionary {
   join_us: any;
   our_connection: any;
   subscriber: any;
+  quick_donate: QuickDonateData;
 }
 
 
@@ -48,7 +49,7 @@ export default async function Home({
     <>
       <section className="w-full bg-white">
         <Banner lang={locale} dictionary={homeDict.banner} />
-        <Donate lang={locale} />
+        <Donate lang={locale} dictionary={homeDict.quick_donate} />
       </section>
       <Services lang={locale} dictionary={homeDict.services} />
       <Activities lang={locale} dictionary={homeDict.activities} />

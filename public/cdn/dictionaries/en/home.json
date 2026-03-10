@@ -10,6 +10,24 @@
     "btn_activities": "Our Activities"
   },
   "heading": "Home Page Minha Foundation - Coming Soon",
+  "quick_donate": {
+    "title": "Quick Donate",
+    "donation_type_label": "Donation Type",
+    "contact_label": "Mobile/Email",
+    "contact_placeholder": "Type Mobile/Email",
+    "amount_label": "Donation Amount",
+    "amount_placeholder": "Write in Number",
+    "button": "Donate",
+    "required": "*",
+    "validation_message": "Please provide contact and amount.",
+    "tax_text": "You will receive tax relief when you donate to Minha Foundation.",
+    "tax_link_text": "Click here to learn more.",
+    "options": [
+      { "value": "fund", "label": "Donation Fund" },
+      { "value": "project", "label": "Project Support" },
+      { "value": "general", "label": "General Donation" }
+    ]
+  },
   "services": {
     "header": {
       "title": "For Ummah, With Sunnah",

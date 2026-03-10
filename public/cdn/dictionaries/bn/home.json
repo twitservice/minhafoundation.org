@@ -10,6 +10,24 @@
     "btn_activities": "আমাদের কার্যক্রম"
   },
   "heading": "হোম পেজ মিনহা ফাউন্ডেশন - শীঘ্রই আসছে",
+  "quick_donate": {
+    "title": "দান করুন",
+    "donation_type_label": "দানের ধরন",
+    "contact_label": "মোবাইল/ইমেইল",
+    "contact_placeholder": "মোবাইল/ইমেইল লিখুন",
+    "amount_label": "দানের পরিমাণ",
+    "amount_placeholder": "সংখ্যায় লিখুন",
+    "button": "দান করুন",
+    "required": "*",
+    "validation_message": "অনুগ্রহ করে যোগাযোগ ও পরিমাণ দিন।",
+    "tax_text": "মিনহা ফাউন্ডেশনে দান করলে আপনি কর ছাড় পাবেন।",
+    "tax_link_text": "আরও জানতে এখানে ক্লিক করুন।",
+    "options": [
+      { "value": "fund", "label": "দান তহবিল" },
+      { "value": "project", "label": "প্রকল্প সহায়তা" },
+      { "value": "general", "label": "সাধারণ দান" }
+    ]
+  },
   "services": {
     "header": {
       "title": "উম্মাহর জন্য, সুন্নাহর সাথে",
