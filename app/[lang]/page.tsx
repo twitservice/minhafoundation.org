@@ -1,6 +1,7 @@
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 import Banner, { type BannerData } from "@/components/home/banner";
+import Donate from "@/components/home/donate";
 
 interface HomeDictionary {
   title: string;
@@ -28,10 +29,7 @@ export default async function Home({
   return (
     <>
       <Banner lang={locale} dictionary={homeDict.banner} />
-
-      <h1>
-        {homeDict.heading}
-      </h1>
+      <Donate lang={locale} />
     </>
   );
 }
