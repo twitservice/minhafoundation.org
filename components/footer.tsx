@@ -78,12 +78,13 @@ export default function Footer({ lang, dictionary }: FooterProps) {
           <div className="flex flex-col gap-4">
             <Link href={`/${lang}`} className="inline-block">
               <Image
-                src={footer_images.logo}
-                alt="Minha Foundation"
-                width={100}
-                height={100}
-                className="w-auto h-20 object-contain"
-                priority
+              src={footer_images.logo}
+              alt="Minha Foundation"
+              width={100}
+              height={100}
+              className="w-auto h-20 object-contain"
+              style={{ height: "auto" }}
+              priority
               />
             </Link>
             <p className="text-secondary-text text-sm leading-relaxed max-w-xs">

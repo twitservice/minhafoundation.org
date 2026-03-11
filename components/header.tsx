@@ -9,7 +9,7 @@ import LanguageSwitcher from "./language-switcher";
 
 /** Ensure path ends with trailing slash */
 function withSlash(path: string) {
-  return path.endsWith('/') ? path : `${path}/`;
+    return path.endsWith('/') ? path : `${path}/`;
 }
 
 interface HeaderProps {
@@ -35,7 +35,14 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                         {/* Logo */}
                         <div className="flex-shrink-0">
                             <a href={withSlash(`/${lang}`)}>
-                                <Image src={dictionary.images.logo} alt="Minha Foundation" width={70} height={70} className="w-auto h-14" />
+                                <Image 
+                                    src={dictionary.images.logo} 
+                                    alt="Minha Foundation" 
+                                    width={70} 
+                                    height={70} 
+                                    className="w-auto h-14"
+                                    style={{ height: 'auto' }}
+                                />
                             </a>
                         </div>
 
