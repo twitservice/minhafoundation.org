@@ -21,7 +21,7 @@ export default async function Breadcrumb({ lang, dictionary }: BreadcrumbProps) 
                     className="absolute inset-0 z-10"
                     style={{
                         background:
-                            "linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.2) 100%)",
+                            "linear-gradient(to right, rgba(48,84,53,0.85) 100%, rgba(48,84,53,0.45) 100%, rgba(48,84,53,0.2) 100%)",
                     }}
                 />
 
