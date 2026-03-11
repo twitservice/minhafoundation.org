@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getCommonDictionary } from "@/lib/get-dictionary";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import HtmlLangUpdater from "@/components/html-lang-updater";
-import Breadcrumb from "@/components/breadcrumb";
 
 // Base URL for canonical/hreflang (set in env or hardcode)
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
@@ -64,13 +60,8 @@ export default async function LangLayout({
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params;
-  const locale = lang as Locale;
-  const commonDict = await getCommonDictionary(locale);
-
   return (
     <>
-      <Breadcrumb lang={locale} dictionary={commonDict} />
       {children}
     </>
   );

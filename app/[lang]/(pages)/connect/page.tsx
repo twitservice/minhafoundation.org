@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
-import { getDictionary } from "@/lib/get-dictionary";
+import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
+import Breadcrumb from "@/components/breadcrumb";
 
 interface ConnectPageData {
   title: string;
@@ -45,14 +46,19 @@ export default async function ConnectPage({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<ConnectPageData>(locale, 'connect');
+  const [pageData, commonDict] = await Promise.all([
+    getDictionary<ConnectPageData>(locale, 'connect'),
+    getCommonDictionary(locale),
+  ]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-3xl font-bold text-primary-text mb-8">{pageData.title}</h1>
-        <p className="text-secondary-text">{pageData.content}</p>
+    <>
+      <Breadcrumb breadcrumbImg={commonDict.images.breadcrumb} breadcrumbTitle={pageData.title} />
+      <div className="min-h-screen bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <p className="text-secondary-text">{pageData.content}</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,21 +1,17 @@
-import { i18n, type Locale } from "@/lib/i18n-config";
-import type { CommonDictionary } from "@/lib/get-dictionary";
-
-
 interface BreadcrumbProps {
-    lang: Locale;
-    dictionary: CommonDictionary;
+    breadcrumbImg: string;
+    breadcrumbTitle?: string;
 }
 
 
-export default async function Breadcrumb({ lang, dictionary }: BreadcrumbProps) {
+export default async function Breadcrumb({breadcrumbImg, breadcrumbTitle }: BreadcrumbProps) {
 
 
     return (
         <>
             <div
-                className="relative bg-cover bg-center flex items-center"
-                style={{ backgroundImage: `url('${dictionary.images.breadcrumb}')` }}
+                className="relative bg-cover bg-center flex items-center justify-center"
+                style={{ backgroundImage: `url('${breadcrumbImg}')` }}
             >
                 <div
                     className="absolute inset-0 z-10"
@@ -26,12 +22,12 @@ export default async function Breadcrumb({ lang, dictionary }: BreadcrumbProps) 
                 />
 
                 {/* Centered content */}
-                <div className="relative z-20 mx-auto md:w-8/12 px-4 sm:px-6 lg:px-8 text-left md:text-left pb-28 md:pb-36">
-                    <div className="mt-30 md:mt-unset">
+                <div className="relative z-20 w-full text-center py-28 md:py-36">
+                    {breadcrumbTitle && (
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                            {/* {dictionary.title} */}
+                            {breadcrumbTitle}
                         </h1>
-                    </div>
+                    )}
                 </div>
             </div>
         </>
