@@ -14,7 +14,7 @@ export default async function Breadcrumb({ lang, dictionary }: BreadcrumbProps) 
     return (
         <>
             <div
-                className="relative min-h-[480px] md:min-h-[620px] lg:min-h-[720px] bg-cover bg-center flex items-center"
+                className="relative bg-cover bg-center flex items-center"
                 style={{ backgroundImage: `url('${dictionary.images.breadcrumb}')` }}
             >
                 <div
