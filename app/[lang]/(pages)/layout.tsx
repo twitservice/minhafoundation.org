@@ -4,6 +4,7 @@ import { getCommonDictionary } from "@/lib/get-dictionary";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import HtmlLangUpdater from "@/components/html-lang-updater";
+import Breadcrumb from "@/components/breadcrumb";
 
 // Base URL for canonical/hreflang (set in env or hardcode)
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
@@ -69,10 +70,8 @@ export default async function LangLayout({
 
   return (
     <>
-      <HtmlLangUpdater lang={locale} />
-      <Header lang={locale} dictionary={commonDict} />
+      <Breadcrumb lang={locale} dictionary={commonDict} />
       {children}
-      <Footer lang={locale} dictionary={commonDict} />
     </>
   );
 }

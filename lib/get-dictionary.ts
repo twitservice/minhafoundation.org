@@ -36,6 +36,7 @@ export interface CommonDictionary {
     footerBg: string;
     favicon: string;
     ogImage: string;
+    breadcrumb: string;
   };
   metadata: {
     title: string;

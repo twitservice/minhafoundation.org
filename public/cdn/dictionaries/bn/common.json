@@ -3,7 +3,8 @@
     "logo": "/cdn/assets/img/logo.webp",
     "footerBg": "/cdn/assets/img/footer-bg-bottom-right.webp",
     "favicon": "/cdn/assets/img/logo.webp",
-    "ogImage": "/cdn/assets/img/logo.webp"
+    "ogImage": "/cdn/assets/img/logo.webp",
+    "breadcrumb": "/cdn/assets/img/breadcrumb-bg.webp"
   },
   "metadata": {
     "title": "মিনহা ফাউন্ডেশন",
