@@ -1,6 +1,41 @@
 {
   "title": "আমাদের সম্পর্কে",
   "description": "আখিরাতের জন্য পরিকল্পনা",
-  "content": "এটি একটি অ-রাজনৈতিক এবং মানব কল্যাণমুখী বেসরকারি সংস্থা যা সমাজের সুবিধাবঞ্চিত এবং সুবিধাবঞ্চিত সম্প্রদায়ের সামাজিক-অর্থনৈতিক অবস্থার উন্নতির মাধ্যমে জাতীয় উন্নয়নে অবদান রাখতে এবং প্রচার করতে দৃঢ়প্রতিজ্ঞ। এটি জানুয়ারী 2019 থেকে অক্লান্তভাবে কাজ করছে। এটি একটি অ-রাজনৈতিক এবং মানব কল্যাণমুখী বেসরকারি সংস্থা যা জাতীয় উন্নয়নে অবদান রাখতে এবং প্রচার করতে দৃঢ়প্রতিজ্ঞ।",
-  "image_url": "https://placehold.co/1600x900/344766/344766"
+  "content": "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development through upgrading the socio-economic condition of the disadvantaged and under-privileged communities of the society. It has been working tirelessly since January 2019. It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development.",
+  "image_url": "https://placehold.co/1600x900/344766/344766",
+  "intro": {
+    "title": "Minha Foundation",
+    "description": "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development through upgrading the socio-economic condition of the disadvantaged and under-privileged communities of the society. It has been working tirelessly since January 2019. It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development.",
+    "image_url": "https://placehold.co/1600x900/344766/344766"
+  },
+  "principles": {
+    "title": "Principles and Values",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "blocks": [
+      {
+        "title": "Minha Foundation",
+        "description": "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development through upgrading the socio-economic condition of the disadvantaged.",
+        "points": [
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government ."
+        ],
+        "image_url": "https://placehold.co/1000x700/344766/344766"
+      },
+      {
+        "title": "Minha Foundation",
+        "description": "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national development through upgrading the socio-economic condition of the disadvantaged.",
+        "points": [
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government .",
+          "It is a non-political and human welfare oriented non-government ."
+        ],
+        "image_url": "https://placehold.co/1000x700/344766/344766"
+      }
+    ]
+  }
 }
