@@ -55,8 +55,8 @@
         "links": [
           { "name": "নোটিশ", "url": "/notice" },
           { "name": "আমাদের সাথে যুক্ত হন", "url": "/connect" },
-          { "name": "শর্তাবলী", "url": "/about" },
-          { "name": "গোপনীয়তা নীতি", "url": "/about" }
+          { "name": "শর্তাবলী", "url": "/terms" },
+          { "name": "গোপনীয়তা নীতি", "url": "/privacy-policy" }
         ]
       }
     ],
