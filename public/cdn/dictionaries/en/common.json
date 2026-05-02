@@ -70,5 +70,11 @@
       { "name": "Instagram", "url": "https://instagram.com/minhafoundation", "icon": "instagram" }
     ],
     "copyright_text": "Copyright @ 2025 as Minha Foundation All rights and reserved"
+  },
+  "subscriber": {
+    "title": "Subscribe our newsletters",
+    "description": "It is a non-political and human welfare oriented government organization steadfast. It is a non-political.",
+    "placeholder": "Type Email",
+    "button": "Subscribe"
   }
 }

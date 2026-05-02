@@ -29,6 +29,14 @@ export interface QuickLinkSection {
   links: MenuItem[];
 }
 
+// Subscriber section dictionary
+export interface SubscriberDictionary {
+  title: string;
+  description: string;
+  placeholder: string;
+  button: string;
+}
+
 // Common dictionary (header, footer, metadata, shared content)
 export interface CommonDictionary {
   images: {
@@ -58,6 +66,7 @@ export interface CommonDictionary {
     social_links: SocialLink[];
     copyright_text: string;
   };
+  subscriber: SubscriberDictionary;
 }
 
 interface DictionaryCacheEntry {
