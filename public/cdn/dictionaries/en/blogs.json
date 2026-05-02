@@ -2,5 +2,122 @@
   "title": "Blogs",
   "description": "Latest blogs and articles",
   "meta_img": "",
-  "content": "Blogs Page Minha Foundation"
+  "sections": {
+    "latest": "Latest Blog",
+    "popular": "Popular"
+  },
+  "featured": {
+    "title": "Iftar Distribution Among the Poor Under Iftar Distribution 2025",
+    "excerpt": "It is a non-political and human welfare oriented organization. This initiative continues our commitment to support underserved communities with dignity and care.",
+    "date": "Mar 04, 2025",
+    "image_url": "https://placehold.co/1200x720/344766/ffffff?text=Latest+Blog",
+    "alt": "Featured blog cover for Iftar distribution 2025",
+    "url": "/blogs/iftar-distribution-2025"
+  },
+  "popular_items": [
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/240x240/344766/ffffff?text=Popular+01",
+      "alt": "Popular blog thumbnail one",
+      "url": "/blogs/pricing-ui-ux-tool-1"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/240x240/344766/ffffff?text=Popular+02",
+      "alt": "Popular blog thumbnail two",
+      "url": "/blogs/pricing-ui-ux-tool-2"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/240x240/344766/ffffff?text=Popular+03",
+      "alt": "Popular blog thumbnail three",
+      "url": "/blogs/pricing-ui-ux-tool-3"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/240x240/344766/ffffff?text=Popular+04",
+      "alt": "Popular blog thumbnail four",
+      "url": "/blogs/pricing-ui-ux-tool-4"
+    }
+  ],
+  "posts": [
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+01",
+      "alt": "Blog grid thumbnail one",
+      "url": "/blogs/pricing-ui-ux-tool-5"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+02",
+      "alt": "Blog grid thumbnail two",
+      "url": "/blogs/pricing-ui-ux-tool-6"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+03",
+      "alt": "Blog grid thumbnail three",
+      "url": "/blogs/pricing-ui-ux-tool-7"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+04",
+      "alt": "Blog grid thumbnail four",
+      "url": "/blogs/pricing-ui-ux-tool-8"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+05",
+      "alt": "Blog grid thumbnail five",
+      "url": "/blogs/pricing-ui-ux-tool-9"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+06",
+      "alt": "Blog grid thumbnail six",
+      "url": "/blogs/pricing-ui-ux-tool-10"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+07",
+      "alt": "Blog grid thumbnail seven",
+      "url": "/blogs/pricing-ui-ux-tool-11"
+    },
+    {
+      "title": "Pricing your UI/UX tool",
+      "excerpt": "Discover pricing strategies, including hourly vs. project-based models, and how to charge what you're worth.",
+      "date": "Mar 04, 2025",
+      "image_url": "https://placehold.co/800x600/344766/ffffff?text=Blog+08",
+      "alt": "Blog grid thumbnail eight",
+      "url": "/blogs/pricing-ui-ux-tool-12"
+    }
+  ],
+  "pagination": {
+    "previous": "<",
+    "next": ">",
+    "pages": [1, 2, 3, 4, 5],
+    "current": 3
+  }
 }
