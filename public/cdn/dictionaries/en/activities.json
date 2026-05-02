@@ -1,5 +1,121 @@
 {
   "title": "Activities",
   "description": "Our Activities and Programs",
-  "content": "Activities Page Minha Foundation"
+  "content": "Activities Page Minha Foundation",
+  "badge": "Regular Project",
+  "see_details": "See Details",
+  "items": [
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-1"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-2"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-3"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-4"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-5"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-6"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-7"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-8"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-9"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-10"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-11"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-12"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-13"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-14"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-15"
+    },
+    {
+      "title": "Skilled Based Entrepreneur",
+      "description": "It is a non-political and human welfare oriented. It is a non-political and huma...",
+      "image_url": "https://placehold.co/600x400/344766/344766",
+      "badge": "Regular Project",
+      "slug": "skilled-based-entrepreneur-16"
+    }
+  ]
 }
