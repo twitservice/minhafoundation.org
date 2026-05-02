@@ -1,0 +1,40 @@
+{
+  "title": "Regular Donor",
+  "description": "Join as a regular donor and support continuous welfare activities.",
+  "meta_img": "",
+  "top_notice": "For automatic contribution support, contact us at autopay@minhafoundation.org",
+  "left": {
+    "image_url": "https://placehold.co/1000x620/344766/ffffff?text=Regular+Donor",
+    "image_alt": "Regular donor banner image",
+    "intro_paragraphs": [
+      "Regular donation helps us sustain food support, education, and emergency assistance year-round.",
+      "Your recurring contribution allows us to plan long-term projects with confidence.",
+      "Every amount, big or small, makes a meaningful impact in the lives of disadvantaged families."
+    ],
+    "expense_title": "Expense Categories",
+    "expense_points": [
+      "Human welfare and relief activities",
+      "Education and social development support",
+      "Administrative and operational essentials"
+    ],
+    "auto_title": "Set Up Automatic Contributions",
+    "auto_description": "Enable monthly or daily recurring support and help us serve communities consistently."
+  },
+  "form": {
+    "title": "Join With Us All of Our Charity Work",
+    "description": "Fill out your information and complete your donation securely.",
+    "frequency": {
+      "daily": "Daily",
+      "monthly": "Monthly"
+    },
+    "quick_amounts": ["$ 10", "$ 20", "$ 30", "$ 40", "$ 50", "Other"],
+    "fields": {
+      "donation_amount": "Donation Amount",
+      "your_name": "Your Name",
+      "phone_email": "Phone/Email",
+      "donate_on_behalf": "Donate on behalf of"
+    },
+    "payment_methods": ["bKash", "Nagad", "Visa/Mastercard"],
+    "button": "Next Step"
+  }
+}

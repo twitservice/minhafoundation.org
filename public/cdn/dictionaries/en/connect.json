@@ -2,5 +2,11 @@
   "title": "Connect With Us",
   "description": "Get connected with Minha Foundation",
   "meta_img": "",
-  "content": "Connect With Us Page Minha Foundation"
+  "intro": "Choose a pathway to join and contribute. You can become a regular donor, lifetime donor member, volunteer, or apply for career opportunities.",
+  "tabs": {
+    "donor": "Regular Donor",
+    "member": "Lifetime Donor",
+    "voluntar": "Volunteer",
+    "career": "Career"
+  }
 }

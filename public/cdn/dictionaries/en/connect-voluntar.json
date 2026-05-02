@@ -1,0 +1,34 @@
+{
+  "title": "Volunteer",
+  "description": "Apply to become a volunteer and support projects on the ground.",
+  "meta_img": "",
+  "left": {
+    "heading": "Become our associate",
+    "description": "Volunteers are the backbone of our fieldwork and humanitarian response.",
+    "image_url": "https://placehold.co/1000x620/344766/ffffff?text=Volunteer",
+    "image_alt": "Volunteer information image",
+    "quote": "The best of people are those who are most beneficial to others. (Sahih al-Jami' as-Saghir, 3289)",
+    "benefits_title": "What will be available at As Sunnah",
+    "benefits": [
+      "Structured volunteer orientation",
+      "Project-based field engagement",
+      "Team collaboration and leadership opportunities",
+      "Community outreach and humanitarian support",
+      "Experience in social service operations"
+    ]
+  },
+  "application": {
+    "title": "Volunteer Application",
+    "description": "If you wish to work as a volunteer under Minha Foundation, please fill out the application form below.",
+    "sections": [
+      "Personal Information",
+      "Professional Information",
+      "Current Address",
+      "Permanent Address",
+      "Social Media Information",
+      "Educational Qualification"
+    ],
+    "required_note": "Fields marked are mandatory, others are optional.",
+    "submit": "Apply"
+  }
+}

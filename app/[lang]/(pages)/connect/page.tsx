@@ -1,61 +1,4 @@
-import type { Metadata } from "next";
-import { i18n, type Locale } from "@/lib/i18n-config";
-import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
-import Breadcrumb from "@/components/breadcrumb";
-import { resolveMetaImg } from "@/lib/meta";
-
-interface ConnectPageData {
-  title: string;
-  description: string;
-  content: string;
-  meta_img?: string;
-}
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
-
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
-  const locale = lang as Locale;
-  const [pageData, commonDict] = await Promise.all([
-    getDictionary<ConnectPageData>(locale, 'connect'),
-    getCommonDictionary(locale),
-  ]);
-  const metaImg = resolveMetaImg(pageData.meta_img, commonDict.images.meta_img, baseUrl);
-
-  const languages: Record<string, string> = {};
-  for (const loc of i18n.locales) {
-    languages[loc] = `${baseUrl}/${loc}/connect`;
-  }
-
-  return {
-    title: pageData.title,
-    description: pageData.description,
-    alternates: {
-      canonical: `${baseUrl}/${locale}/connect`,
-      languages,
-    },
-      openGraph: {
-        title: pageData.title,
-        description: pageData.description,
-        url: `${baseUrl}/${locale}/connect`,
-        images: [{ url: metaImg }],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: pageData.title,
-        description: pageData.description,
-        images: [metaImg],
-      },
-  };
-}
+import { redirect } from "next/navigation";
 
 export default async function ConnectPage({
   params,
@@ -63,20 +6,5 @@ export default async function ConnectPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const locale = lang as Locale;
-  const [pageData, commonDict] = await Promise.all([
-    getDictionary<ConnectPageData>(locale, 'connect'),
-    getCommonDictionary(locale),
-  ]);
-
-  return (
-    <>
-      <Breadcrumb breadcrumbImg={commonDict.images.breadcrumb} breadcrumbTitle={pageData.title} />
-      <div className="min-h-screen bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <p className="text-secondary-text">{pageData.content}</p>
-        </div>
-      </div>
-    </>
-  );
+  redirect(`/${lang}/connect/donor`);
 }

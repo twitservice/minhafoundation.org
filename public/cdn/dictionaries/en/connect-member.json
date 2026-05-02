@@ -1,0 +1,42 @@
+{
+  "title": "Lifetime Donor Member",
+  "description": "Apply as a lifetime donor member and support sustainable initiatives.",
+  "meta_img": "",
+  "left": {
+    "heading": "How To Become a Lifetime and Donor Member",
+    "image_url": "https://placehold.co/1000x620/344766/ffffff?text=Lifetime+Member",
+    "image_alt": "Lifetime donor member section image",
+    "paragraphs": [
+      "Lifetime donor membership allows you to contribute to long-term institutional development.",
+      "Your support helps us expand mosques, community services, and education initiatives.",
+      "You become part of a consistent impact model that benefits future generations."
+    ],
+    "highlight_title": "What will be available at As Minha Foundation Mosque Complex and Islamic Center:",
+    "highlights": [
+      "Human welfare and non-government community services",
+      "Faith-based educational support initiatives",
+      "Sustainable social service activities",
+      "Community connection and donor engagement"
+    ]
+  },
+  "form": {
+    "title": "Membership Application",
+    "description": "Complete the application form to register as a lifetime donor member.",
+    "tabs": {
+      "lifetime_member": "Lifetime Member",
+      "donor_member": "Donor Member"
+    },
+    "minimum_donation": "Minimum Donation of 1000 Dollar, You Can Donate More if Desired",
+    "fields": [
+      "Your Name",
+      "Father's Name",
+      "Phone Number",
+      "Email",
+      "Occupation",
+      "Reference",
+      "Address"
+    ],
+    "payment_options": ["Online Payment", "Bank Transfer", "Bank Deposit"],
+    "button": "Donate"
+  }
+}
