@@ -56,7 +56,8 @@
           { "name": "নোটিশ", "url": "/notice" },
           { "name": "আমাদের সাথে যুক্ত হন", "url": "/connect" },
           { "name": "শর্তাবলী", "url": "/terms" },
-          { "name": "গোপনীয়তা নীতি", "url": "/privacy-policy" }
+          { "name": "গোপনীয়তা নীতি", "url": "/privacy-policy" },
+          { "name": "যাকাত ক্যালকুলেটর", "url": "/zakat-calculator" }
         ]
       }
     ],

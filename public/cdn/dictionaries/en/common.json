@@ -56,7 +56,8 @@
           { "name": "Notice", "url": "/notice" },
           { "name": "Connect With Us", "url": "/connect" },
           { "name": "Terms of Conditions", "url": "/terms" },
-          { "name": "Privacy Policy", "url": "/privacy-policy" }
+          { "name": "Privacy Policy", "url": "/privacy-policy" },
+          { "name": "Zakat Calculator", "url": "/zakat-calculator" }
         ]
       }
     ],
