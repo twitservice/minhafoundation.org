@@ -32,7 +32,7 @@ export default async function ConnectLayout({
   const tabs: ConnectTabItem[] = [
     { label: connectData.tabs.donor, href: `/${locale}/connect/donor` },
     { label: connectData.tabs.member, href: `/${locale}/connect/member` },
-    { label: connectData.tabs.voluntar, href: `/${locale}/connect/voluntar` },
+    { label: connectData.tabs.voluntar, href: `/${locale}/connect/volunteer` },
     { label: connectData.tabs.career, href: `/${locale}/connect/career` },
   ];
 
