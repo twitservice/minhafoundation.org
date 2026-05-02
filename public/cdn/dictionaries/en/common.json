@@ -37,6 +37,7 @@
         "links": [
           { "name": "About Us", "url": "/about" },
           { "name": "Projects", "url": "/activities" },
+          { "name": "Zakat Calculator", "url": "/zakat-calculator" },
           { "name": "Blogs", "url": "/blogs" },
           { "name": "Gallery", "url": "/gallery" }
         ]
@@ -44,6 +45,7 @@
       {
         "title": "Connect",
         "links": [
+          { "name": "Connect With Us", "url": "/connect" },
           { "name": "Regular Donor", "url": "/donate" },
           { "name": "Lifetime Donor", "url": "/donate" },
           { "name": "Volunteer", "url": "/connect" },
@@ -54,10 +56,8 @@
         "title": "Others",
         "links": [
           { "name": "Notice", "url": "/notice" },
-          { "name": "Connect With Us", "url": "/connect" },
           { "name": "Terms of Conditions", "url": "/terms" },
-          { "name": "Privacy Policy", "url": "/privacy-policy" },
-          { "name": "Zakat Calculator", "url": "/zakat-calculator" }
+          { "name": "Privacy Policy", "url": "/privacy-policy" }
         ]
       }
     ],

@@ -37,6 +37,7 @@
         "links": [
           { "name": "আমাদের সম্পর্কে", "url": "/about" },
           { "name": "প্রকল্পসমূহ", "url": "/activities" },
+          { "name": "যাকাত ক্যালকুলেটর", "url": "/zakat-calculator" },
           { "name": "ব্লগ", "url": "/blogs" },
           { "name": "গ্যালারি", "url": "/gallery" }
         ]
@@ -44,6 +45,7 @@
       {
         "title": "কানেক্ট",
         "links": [
+          { "name": "আমাদের সাথে যুক্ত হন", "url": "/connect" },
           { "name": "নিয়মিত দাতা", "url": "/donate" },
           { "name": "আজীবন দাতা", "url": "/donate" },
           { "name": "স্বেচ্ছাসেবক", "url": "/connect" },
@@ -54,10 +56,8 @@
         "title": "অন্যান্য",
         "links": [
           { "name": "নোটিশ", "url": "/notice" },
-          { "name": "আমাদের সাথে যুক্ত হন", "url": "/connect" },
           { "name": "শর্তাবলী", "url": "/terms" },
-          { "name": "গোপনীয়তা নীতি", "url": "/privacy-policy" },
-          { "name": "যাকাত ক্যালকুলেটর", "url": "/zakat-calculator" }
+          { "name": "গোপনীয়তা নীতি", "url": "/privacy-policy" }
         ]
       }
     ],
