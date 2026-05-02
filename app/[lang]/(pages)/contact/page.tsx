@@ -3,6 +3,7 @@ import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
 import Breadcrumb from "@/components/breadcrumb";
 import { resolveMetaImg } from "@/lib/meta";
+import ContactForm from "@/components/contact/contact-form";
 
 interface ContactPageData {
   title: string;
@@ -20,6 +21,9 @@ interface ContactPageData {
     message_placeholder: string;
     note: string;
     button: string;
+    captcha_label: string;
+    captcha_required_message: string;
+    captcha_missing_site_key: string;
   };
   location: {
     title: string;
@@ -100,70 +104,7 @@ export default async function ContactPage({
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
             <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
               <h2 className="text-2xl font-bold text-primary">{pageData.form.title}</h2>
-
-              <form className="mt-6 space-y-4" action="#" method="post">
-                <div>
-                  <label className="mb-2 block text-sm font-semibold text-primary" htmlFor="name">
-                    {pageData.form.name_label}
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder={pageData.form.name_placeholder}
-                    className="h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3 text-sm text-primary placeholder:text-gray-400 focus:border-green-600 focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-sm font-semibold text-primary" htmlFor="email">
-                    {pageData.form.email_label}
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder={pageData.form.email_placeholder}
-                    className="h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3 text-sm text-primary placeholder:text-gray-400 focus:border-green-600 focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-sm font-semibold text-primary" htmlFor="subject">
-                    {pageData.form.subject_label}
-                  </label>
-                  <input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    placeholder={pageData.form.subject_placeholder}
-                    className="h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3 text-sm text-primary placeholder:text-gray-400 focus:border-green-600 focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-sm font-semibold text-primary" htmlFor="message">
-                    {pageData.form.message_label}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    placeholder={pageData.form.message_placeholder}
-                    className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-3 text-sm text-primary placeholder:text-gray-400 focus:border-green-600 focus:outline-none"
-                  />
-                </div>
-
-                <p className="text-xs text-secondary-text">{pageData.form.note}</p>
-
-                <button
-                  type="submit"
-                  className="inline-flex h-11 items-center gap-2 rounded-lg bg-green-700 px-5 text-sm font-semibold text-white transition hover:bg-green-800"
-                >
-                  <span>{pageData.form.button}</span>
-                  <span aria-hidden>→</span>
-                </button>
-              </form>
+              <ContactForm form={pageData.form} />
             </section>
 
             <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">

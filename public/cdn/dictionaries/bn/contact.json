@@ -12,6 +12,9 @@
     "subject_placeholder": "এখানে বিষয় লিখুন",
     "message_label": "বার্তা",
     "message_placeholder": "এখানে আপনার বার্তা লিখুন ...",
+    "captcha_label": "নিরাপত্তা যাচাই",
+    "captcha_required_message": "সাবমিট করার আগে নিরাপত্তা যাচাই সম্পন্ন করুন।",
+    "captcha_missing_site_key": "Cloudflare Turnstile site key পাওয়া যায়নি। .env ফাইলে NEXT_PUBLIC_TURNSTILE_SITE_KEY যোগ করুন।",
     "note": "অতিরিক্ত তথ্যের জন্য একটি নোট।",
     "button": "পাঠান"
   },

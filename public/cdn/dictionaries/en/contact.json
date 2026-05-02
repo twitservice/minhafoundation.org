@@ -12,6 +12,9 @@
     "subject_placeholder": "Input subject here",
     "message_label": "Message",
     "message_placeholder": "Write text here ...",
+    "captcha_label": "Security Check",
+    "captcha_required_message": "Please complete the security check before submitting.",
+    "captcha_missing_site_key": "Cloudflare Turnstile site key is missing. Add NEXT_PUBLIC_TURNSTILE_SITE_KEY in .env.",
     "note": "A note for extra info.",
     "button": "Send"
   },
