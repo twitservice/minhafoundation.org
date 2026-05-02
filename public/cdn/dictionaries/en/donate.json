@@ -2,5 +2,43 @@
   "title": "Donate",
   "description": "Support Minha Foundation",
   "meta_img": "",
-  "content": "Donate page coming soon..."
+  "subtitle": "Your support helps us serve disadvantaged communities through impactful humanitarian programs.",
+  "items": [
+    {
+      "title": "Zakat Fund",
+      "description": "Distribute Zakat to eligible families with dignity, transparency, and long-term impact.",
+      "button_text": "Donate",
+      "url": "/donate"
+    },
+    {
+      "title": "Sadaqah Fund",
+      "description": "Support urgent social needs including food, shelter, healthcare, and welfare initiatives.",
+      "button_text": "Donate",
+      "url": "/donate"
+    },
+    {
+      "title": "Orphan Support",
+      "description": "Help provide education, nutrition, and care for orphaned children in vulnerable communities.",
+      "button_text": "Donate",
+      "url": "/donate"
+    },
+    {
+      "title": "Education Aid",
+      "description": "Empower students with tuition support, books, and learning resources for a better future.",
+      "button_text": "Donate",
+      "url": "/donate"
+    },
+    {
+      "title": "Emergency Relief",
+      "description": "Respond quickly to disasters with life-saving assistance and emergency relief supplies.",
+      "button_text": "Donate",
+      "url": "/donate"
+    },
+    {
+      "title": "Masjid & Community",
+      "description": "Contribute to mosque development and community projects that strengthen faith and unity.",
+      "button_text": "Donate",
+      "url": "/donate"
+    }
+  ]
 }
