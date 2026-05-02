@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
 import Breadcrumb from "@/components/breadcrumb";
+import PolicyTabs from "@/components/about/policy-tabs";
 
 interface AboutPageData {
   title: string;
@@ -29,6 +30,14 @@ interface AboutPageData {
     items: {
       title: string;
       description: string;
+    }[];
+  };
+  policy?: {
+    title: string;
+    subtitle: string;
+    tabs: {
+      label: string;
+      points: string[];
     }[];
   };
 }
@@ -229,6 +238,23 @@ export default async function AboutPage({
                   <p className="mt-2 text-base leading-7 text-secondary-text">{item.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      )}
+      {pageData.policy && (
+        <div className="bg-background-light">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+            <div className="text-center">
+              <h2 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl">
+                {pageData.policy.title}
+              </h2>
+              <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-secondary-text">
+                {pageData.policy.subtitle}
+              </p>
+            </div>
+            <div className="mt-8">
+              <PolicyTabs tabs={pageData.policy.tabs} />
             </div>
           </div>
         </div>

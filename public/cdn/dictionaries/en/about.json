@@ -67,5 +67,44 @@
         "description": "Online-based da'wah, writing and publishing Islamic books, conducting religious study circles, and organizing training programs and workshops for Islamic outreach."
       }
     ]
+  },
+  "policy": {
+    "title": "Income-Expenditure Policy",
+    "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
+    "tabs": [
+      {
+        "label": "Source Of Income",
+        "points": [
+          "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote national .",
+          "It is a non-political and human welfare oriented non-government organization steadfast to .",
+          "It is a non-political and human welfare oriented non-government organization  steadfast to contribute.",
+          "It is a non-political and human welfare oriented non-government organization steadfast to contribute. It is a non-political and human welfare oriented.",
+          "It is a non-political and human welfare oriented non-government It is a non-political and human welfare oriented non-government organization steadfast to contribute.",
+          "It is a non-political and human welfare oriented non-government organization steadfast to contribute and promote,"
+        ]
+      },
+      {
+        "label": "Service Expense",
+        "points": [
+          "Funding religious education programs and madrasa operations across the country.",
+          "Providing food, clothing and shelter to flood and disaster victims.",
+          "Installing tube wells and water purification plants in rural communities.",
+          "Distributing winter clothing and blankets to the underprivileged.",
+          "Supporting tree plantation drives and environmental initiatives.",
+          "Organizing free medical camps and health awareness programs."
+        ]
+      },
+      {
+        "label": "Management Expense",
+        "points": [
+          "Administrative and operational costs for running the foundation's offices.",
+          "Staff salaries, training and capacity development programs.",
+          "Technology and digital infrastructure for online da'wah outreach.",
+          "Publication and distribution of Islamic literature and books.",
+          "Travel and coordination expenses for field programs.",
+          "Audit, compliance and legal documentation costs."
+        ]
+      }
+    ]
   }
 }
