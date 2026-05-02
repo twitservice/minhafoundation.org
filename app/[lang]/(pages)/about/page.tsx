@@ -23,6 +23,14 @@ interface AboutPageData {
       image_url: string;
     }[];
   };
+  services?: {
+    title: string;
+    subtitle: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
@@ -108,7 +116,7 @@ export default async function AboutPage({
           </div>
 
           <div className="mx-auto mt-8 max-w-6xl overflow-hidden rounded-3xl bg-[#344766] sm:mt-10">
-            <div className="aspect-[16/7] w-full">
+            <div className="aspect-16/7 w-full">
               <img
                 src={intro.image_url}
                 alt={intro.title}
@@ -118,7 +126,7 @@ export default async function AboutPage({
           </div>
         </div>
       </div>
-          
+
       <div className="bg-background-light">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
 
@@ -139,7 +147,7 @@ export default async function AboutPage({
                 return (
                   <div key={`${block.title}-${index}`} className="grid items-center gap-7 md:grid-cols-2 md:gap-10">
                     <div className={imageFirst ? "order-1" : "order-2 md:order-2"}>
-                      <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-[#344766]">
+                      <div className="aspect-4/3 overflow-hidden rounded-2xl bg-[#344766]">
                         <img
                           src={block.image_url || "https://placehold.co/1000x700/344766/344766"}
                           alt={block.title}
@@ -184,6 +192,47 @@ export default async function AboutPage({
           </div>
         </div>
       </div>
+      {pageData.services && (
+        <div className="bg-background">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+            <div className="text-center">
+              <h2 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl">
+                {pageData.services.title}
+              </h2>
+              <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-secondary-text">
+                {pageData.services.subtitle}
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {pageData.services.items.map((item, index) => (
+                <div
+                  key={`${item.title}-${index}`}
+                  className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+                >
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-rose-100">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-6 w-6 text-rose-500"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.545 3.75 3.75 0 0 1 3.255 3.717Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">{item.title}</h3>
+                  <p className="mt-2 text-base leading-7 text-secondary-text">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
