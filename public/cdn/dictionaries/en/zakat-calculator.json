@@ -1,0 +1,71 @@
+{
+  "title": "Zakat Calculator",
+  "description": "Calculate your Zakat easily and save your latest data locally.",
+  "meta_img": "",
+  "calculator": {
+    "form_title": "Zakat Calculator",
+    "form_description": "Enter your zakatable assets and liabilities, then calculate your payable Zakat.",
+    "rate_label": "Zakat Rate",
+    "currency_symbol": "৳",
+    "fields": {
+      "cash": {
+        "label": "Cash in Hand",
+        "placeholder": "Enter cash amount"
+      },
+      "bank_balance": {
+        "label": "Bank Balance",
+        "placeholder": "Enter bank balance"
+      },
+      "gold_value": {
+        "label": "Gold Value",
+        "placeholder": "Enter current gold value"
+      },
+      "silver_value": {
+        "label": "Silver Value",
+        "placeholder": "Enter current silver value"
+      },
+      "investments": {
+        "label": "Investments",
+        "placeholder": "Enter investments amount"
+      },
+      "business_assets": {
+        "label": "Business Assets",
+        "placeholder": "Enter business assets"
+      },
+      "receivables": {
+        "label": "Receivables",
+        "placeholder": "Enter expected receivables"
+      },
+      "liabilities": {
+        "label": "Liabilities",
+        "placeholder": "Enter liabilities amount"
+      },
+      "nisab_threshold": {
+        "label": "Nisab Threshold",
+        "placeholder": "Enter Nisab threshold"
+      }
+    },
+    "buttons": {
+      "calculate": "Calculate Zakat",
+      "save": "Save Data",
+      "reset": "Reset",
+      "print": "Print"
+    },
+    "result": {
+      "title": "Calculation Result",
+      "total_assets": "Total Assets",
+      "total_liabilities": "Total Liabilities",
+      "net_assets": "Net Assets",
+      "nisab_threshold": "Nisab Threshold",
+      "zakat_due": "Zakat Due (2.5%)",
+      "status_met": "Your net assets reached Nisab. Zakat is applicable.",
+      "status_not_met": "Your net assets did not reach Nisab. Zakat is not applicable."
+    },
+    "messages": {
+      "save_confirm": "Do you want to save the current calculator data to this browser?",
+      "save_success": "Your latest calculator data has been saved.",
+      "save_cancelled": "Save cancelled.",
+      "loaded_saved_data": "Previously saved calculator data loaded."
+    }
+  }
+}
