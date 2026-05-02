@@ -3,6 +3,7 @@ import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
 import Breadcrumb from "@/components/breadcrumb";
 import Link from "next/link";
+import { resolveMetaImg } from "@/lib/meta";
 
 interface ActivityItem {
   title: string;
@@ -17,6 +18,7 @@ interface ActivitiesPageData {
   title: string;
   description: string;
   content: string;
+  meta_img?: string;
   badge: string;
   see_details: string;
   items: ActivityItem[];
@@ -35,7 +37,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<ActivitiesPageData>(locale, 'activities');
+  const [pageData, commonDict] = await Promise.all([
+    getDictionary<ActivitiesPageData>(locale, 'activities'),
+    getCommonDictionary(locale),
+  ]);
+  const metaImg = resolveMetaImg(pageData.meta_img, commonDict.images.meta_img, baseUrl);
 
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
@@ -49,6 +55,18 @@ export async function generateMetadata({
       canonical: `${baseUrl}/${locale}/activities`,
       languages,
     },
+      openGraph: {
+        title: pageData.title,
+        description: pageData.description,
+        url: `${baseUrl}/${locale}/activities`,
+        images: [{ url: metaImg }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: pageData.title,
+        description: pageData.description,
+        images: [metaImg],
+      },
   };
 }
 

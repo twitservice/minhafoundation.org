@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
 import Breadcrumb from "@/components/breadcrumb";
+import { resolveMetaImg } from "@/lib/meta";
 
 interface NoticePageData {
   title: string;
   description: string;
   content: string;
+  meta_img?: string;
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
@@ -22,7 +24,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<NoticePageData>(locale, 'notice');
+  const [pageData, commonDict] = await Promise.all([
+    getDictionary<NoticePageData>(locale, 'notice'),
+    getCommonDictionary(locale),
+  ]);
+  const metaImg = resolveMetaImg(pageData.meta_img, commonDict.images.meta_img, baseUrl);
 
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
@@ -36,6 +42,18 @@ export async function generateMetadata({
       canonical: `${baseUrl}/${locale}/notice`,
       languages,
     },
+      openGraph: {
+        title: pageData.title,
+        description: pageData.description,
+        url: `${baseUrl}/${locale}/notice`,
+        images: [{ url: metaImg }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: pageData.title,
+        description: pageData.description,
+        images: [metaImg],
+      },
   };
 }
 

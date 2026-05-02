@@ -3,11 +3,13 @@ import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
 import Breadcrumb from "@/components/breadcrumb";
 import PolicyTabs from "@/components/about/policy-tabs";
+import { resolveMetaImg } from "@/lib/meta";
 
 interface AboutPageData {
   title: string;
   description: string;
   content: string;
+  meta_img?: string;
   image_url?: string;
   intro?: {
     title: string;
@@ -55,7 +57,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang as Locale;
-  const pageData = await getDictionary<AboutPageData>(locale, 'about');
+  const [pageData, commonDict] = await Promise.all([
+    getDictionary<AboutPageData>(locale, 'about'),
+    getCommonDictionary(locale),
+  ]);
+  const metaImg = resolveMetaImg(pageData.meta_img, commonDict.images.meta_img, baseUrl);
 
   const languages: Record<string, string> = {};
   for (const loc of i18n.locales) {
@@ -69,6 +75,18 @@ export async function generateMetadata({
       canonical: `${baseUrl}/${locale}/about`,
       languages,
     },
+      openGraph: {
+        title: pageData.title,
+        description: pageData.description,
+        url: `${baseUrl}/${locale}/about`,
+        images: [{ url: metaImg }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: pageData.title,
+        description: pageData.description,
+        images: [metaImg],
+      },
   };
 }
 

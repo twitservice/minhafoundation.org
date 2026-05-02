@@ -4,7 +4,8 @@
     "footerBg": "/cdn/assets/img/footer-bg-bottom-right.webp",
     "favicon": "/cdn/assets/img/logo.webp",
     "ogImage": "/cdn/assets/img/logo.webp",
-    "breadcrumb": "/cdn/assets/img/breadcrumb-bg.webp"
+    "breadcrumb": "/cdn/assets/img/breadcrumb-bg.webp",
+    "meta_img": "/cdn/assets/img/logo.webp"
   },
   "metadata": {
     "title": "Minha Foundation",

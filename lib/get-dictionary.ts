@@ -45,6 +45,7 @@ export interface CommonDictionary {
     favicon: string;
     ogImage: string;
     breadcrumb: string;
+    meta_img: string;
   };
   metadata: {
     title: string;

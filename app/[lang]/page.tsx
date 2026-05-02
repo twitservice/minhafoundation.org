@@ -1,5 +1,8 @@
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
+import type { Metadata } from "next";
+import { getCommonDictionary } from "@/lib/get-dictionary";
+import { resolveMetaImg } from "@/lib/meta";
 import Banner, { type BannerData } from "@/components/home/banner";
 import Donate, { type QuickDonateData } from "@/components/home/donate";
 import Services from "@/components/home/services";
@@ -25,6 +28,49 @@ interface HomeDictionary {
   join_us: any;
   our_connection: any;
   quick_donate: QuickDonateData;
+  meta_img?: string;
+}
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  const [homeDict, commonDict] = await Promise.all([
+    getDictionary<HomeDictionary>(locale, 'home'),
+    getCommonDictionary(locale),
+  ]);
+  const metaImg = resolveMetaImg(homeDict.meta_img, commonDict.images.meta_img, baseUrl);
+
+  const languages: Record<string, string> = {};
+  for (const loc of i18n.locales) {
+    languages[loc] = `${baseUrl}/${loc}`;
+  }
+
+  return {
+    title: homeDict.title,
+    description: homeDict.description,
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages,
+    },
+    openGraph: {
+      title: homeDict.title,
+      description: homeDict.description,
+      url: `${baseUrl}/${locale}`,
+      images: [{ url: metaImg }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: homeDict.title,
+      description: homeDict.description,
+      images: [metaImg],
+    },
+  };
 }
 
 

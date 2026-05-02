@@ -1,6 +1,7 @@
 {
   "title": "মিনহা ফাউন্ডেশন",
   "description": "আখিরাতের জন্য পরিকল্পনা",
+  "meta_img": "",
   "banner": {
     "bg_image": "/cdn/assets/img/minhafoundation-slider-01.webp",
     "title": "মিনহা ফাউন্ডেশন",
@@ -23,9 +24,18 @@
     "tax_text": "মিনহা ফাউন্ডেশনে দান করলে আপনি কর ছাড় পাবেন।",
     "tax_link_text": "আরও জানতে এখানে ক্লিক করুন।",
     "options": [
-      { "value": "fund", "label": "দান তহবিল" },
-      { "value": "project", "label": "প্রকল্প সহায়তা" },
-      { "value": "general", "label": "সাধারণ দান" }
+      {
+        "value": "fund",
+        "label": "দান তহবিল"
+      },
+      {
+        "value": "project",
+        "label": "প্রকল্প সহায়তা"
+      },
+      {
+        "value": "general",
+        "label": "সাধারণ দান"
+      }
     ]
   },
   "services": {
@@ -146,14 +156,46 @@
     "subtitle": "এটি একটি অ-রাজনৈতিক ও মানবিক কল্যাণভিত্তিক অসরকারি সংগঠন।",
     "see_more": "আরও দেখুন",
     "items": [
-      { "id": "g1", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+1", "alt": "গ্যালারি ছবি ১" },
-      { "id": "g2", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+2", "alt": "গ্যালারি ছবি ২" },
-      { "id": "g3", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+3", "alt": "গ্যালারি ছবি ৩" },
-      { "id": "g4", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+4", "alt": "গ্যালারি ছবি ৪" },
-      { "id": "g5", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+5", "alt": "গ্যালারি ছবি ৫" },
-      { "id": "g6", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+6", "alt": "গ্যালারি ছবি ৬" },
-      { "id": "g7", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+7", "alt": "গ্যালারি ছবি ৭" },
-      { "id": "g8", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+8", "alt": "গ্যালারি ছবি ৮" }
+      {
+        "id": "g1",
+        "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+1",
+        "alt": "গ্যালারি ছবি ১"
+      },
+      {
+        "id": "g2",
+        "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+2",
+        "alt": "গ্যালারি ছবি ২"
+      },
+      {
+        "id": "g3",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+3",
+        "alt": "গ্যালারি ছবি ৩"
+      },
+      {
+        "id": "g4",
+        "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+4",
+        "alt": "গ্যালারি ছবি ৪"
+      },
+      {
+        "id": "g5",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+5",
+        "alt": "গ্যালারি ছবি ৫"
+      },
+      {
+        "id": "g6",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+6",
+        "alt": "গ্যালারি ছবি ৬"
+      },
+      {
+        "id": "g7",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+7",
+        "alt": "গ্যালারি ছবি ৭"
+      },
+      {
+        "id": "g8",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+8",
+        "alt": "গ্যালারি ছবি ৮"
+      }
     ]
   },
   "blog": {
@@ -229,9 +271,18 @@
     "title": "আমাদের প্রতিষ্ঠান",
     "subtitle": "এটি একটি অরাজনৈতিক এবং মানবকল্যাণ ভিত্তিক বেসরকারি সংস্থা।",
     "logos": [
-      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ" },
-      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ" },
-      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ" }
+      {
+        "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation",
+        "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ"
+      },
+      {
+        "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation",
+        "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ"
+      },
+      {
+        "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation",
+        "alt": "মিনহা ফাউন্ডেশন - আখিরাতের জন্য বিনিয়োগ"
+      }
     ]
   },
   "subscriber": {

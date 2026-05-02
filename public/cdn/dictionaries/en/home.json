@@ -1,6 +1,7 @@
 {
   "title": "Minha Foundation",
   "description": "Invest for Akhirah",
+  "meta_img": "",
   "banner": {
     "bg_image": "/cdn/assets/img/minhafoundation-slider-01.webp",
     "title": "Minha Foundation",
@@ -23,9 +24,18 @@
     "tax_text": "You will receive tax relief when you donate to Minha Foundation.",
     "tax_link_text": "Click here to learn more.",
     "options": [
-      { "value": "fund", "label": "Donation Fund" },
-      { "value": "project", "label": "Project Support" },
-      { "value": "general", "label": "General Donation" }
+      {
+        "value": "fund",
+        "label": "Donation Fund"
+      },
+      {
+        "value": "project",
+        "label": "Project Support"
+      },
+      {
+        "value": "general",
+        "label": "General Donation"
+      }
     ]
   },
   "services": {
@@ -146,14 +156,46 @@
     "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
     "see_more": "See More",
     "items": [
-      { "id": "g1", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+1", "alt": "Gallery image 1" },
-      { "id": "g2", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+2", "alt": "Gallery image 2" },
-      { "id": "g3", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+3", "alt": "Gallery image 3" },
-      { "id": "g4", "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+4", "alt": "Gallery image 4" },
-      { "id": "g5", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+5", "alt": "Gallery image 5" },
-      { "id": "g6", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+6", "alt": "Gallery image 6" },
-      { "id": "g7", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+7", "alt": "Gallery image 7" },
-      { "id": "g8", "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+8", "alt": "Gallery image 8" }
+      {
+        "id": "g1",
+        "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+1",
+        "alt": "Gallery image 1"
+      },
+      {
+        "id": "g2",
+        "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+2",
+        "alt": "Gallery image 2"
+      },
+      {
+        "id": "g3",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+3",
+        "alt": "Gallery image 3"
+      },
+      {
+        "id": "g4",
+        "src": "https://placehold.co/600x400/374151/cbd5e1?text=Gallery+4",
+        "alt": "Gallery image 4"
+      },
+      {
+        "id": "g5",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+5",
+        "alt": "Gallery image 5"
+      },
+      {
+        "id": "g6",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+6",
+        "alt": "Gallery image 6"
+      },
+      {
+        "id": "g7",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+7",
+        "alt": "Gallery image 7"
+      },
+      {
+        "id": "g8",
+        "src": "https://placehold.co/600x500/374151/cbd5e1?text=Gallery+8",
+        "alt": "Gallery image 8"
+      }
     ]
   },
   "blog": {
@@ -229,9 +271,18 @@
     "title": "Our Institution",
     "subtitle": "It is a non-political and human welfare oriented non-government organization steadfast.",
     "logos": [
-      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" },
-      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" },
-      { "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation", "alt": "Minha Foundation - Invest for Akhirah" }
+      {
+        "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation",
+        "alt": "Minha Foundation - Invest for Akhirah"
+      },
+      {
+        "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation",
+        "alt": "Minha Foundation - Invest for Akhirah"
+      },
+      {
+        "src": "https://placehold.co/180x180/fef2f2/374151?text=Minha+Foundation",
+        "alt": "Minha Foundation - Invest for Akhirah"
+      }
     ]
   },
   "subscriber": {
