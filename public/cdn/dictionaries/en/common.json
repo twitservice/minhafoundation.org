@@ -46,11 +46,12 @@
         "title": "Connect",
         "links": [
           { "name": "Connect With Us", "url": "/connect" },
-          { "name": "Regular Donor", "url": "/donate" },
-          { "name": "Lifetime Donor", "url": "/donate" },
-          { "name": "Volunteer", "url": "/connect" },
-          { "name": "Career", "url": "/connect" }
-        ]
+          { "name": "Regular Donor", "url": "/connect/donor" },
+          { "name": "Lifetime Donor", "url": "/connect/member/" },
+          { "name": "Volunteer", "url": "/connect/volunteer/" },
+          { "name": "Career", "url": "/connect/career/" },
+          { "name": "Volunteer Application", "url": "/volunteer-application/" }
+        ] 
       },
       {
         "title": "Others",

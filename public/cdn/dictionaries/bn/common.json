@@ -46,10 +46,12 @@
         "title": "কানেক্ট",
         "links": [
           { "name": "আমাদের সাথে যুক্ত হন", "url": "/connect" },
-          { "name": "নিয়মিত দাতা", "url": "/donate" },
-          { "name": "আজীবন দাতা", "url": "/donate" },
-          { "name": "স্বেচ্ছাসেবক", "url": "/connect" },
-          { "name": "ক্যারিয়ার", "url": "/connect" }
+          { "name": "নিয়মিত দাতা", "url": "/connect/donor" },
+          { "name": "আজীবন দাতা", "url": "/connect/member/" },
+          { "name": "স্বেচ্ছাসেবক", "url": "/connect/volunteer/" },
+          { "name": "ক্যারিয়ার", "url": "/connect/career/" },
+          { "name": "ভলিউন্টার এপ্লিকেশন", "url": "/volunteer-application/" }
+
         ]
       },
       {

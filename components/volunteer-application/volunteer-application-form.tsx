@@ -165,9 +165,10 @@ export default function VolunteerApplicationForm({ form }: VolunteerApplicationF
           id="interest"
           name="interest"
           className="h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3 text-sm text-primary focus:border-green-600 focus:outline-none"
+          defaultValue=""
           required
         >
-          <option value="" disabled selected>
+          <option value="" disabled>
             {form.interest_placeholder}
           </option>
           {form.interest_options.map((option) => (
