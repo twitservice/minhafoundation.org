@@ -2,5 +2,64 @@
   "title": "Notice",
   "description": "Important notices and announcements",
   "meta_img": "",
-  "content": "Notice Page Minha Foundation"
+  "groups": [
+    {
+      "date": "August 25, 2025",
+      "items": [
+        {
+          "title": "Teacher Training Program",
+          "description": "It is a non-political and human welfare oriented initiative. It is a non-political and human welfare oriented good for non-government organization steadfast.",
+          "badge": "Course",
+          "url": "/notice/teacher-training-program-1"
+        },
+        {
+          "title": "Teacher Training Program",
+          "description": "It is a non-political and human welfare oriented initiative. It is a non-political and human welfare oriented good for non-government organization steadfast.",
+          "badge": "Course",
+          "url": "/notice/teacher-training-program-2"
+        },
+        {
+          "title": "Teacher Training Program",
+          "description": "It is a non-political and human welfare oriented initiative. It is a non-political and human welfare oriented good for non-government organization steadfast.",
+          "badge": "Course",
+          "url": "/notice/teacher-training-program-3"
+        },
+        {
+          "title": "Teacher Training Program",
+          "description": "It is a non-political and human welfare oriented initiative. It is a non-political and human welfare oriented good for non-government organization steadfast.",
+          "badge": "Course",
+          "url": "/notice/teacher-training-program-4"
+        },
+        {
+          "title": "Teacher Training Program",
+          "description": "It is a non-political and human welfare oriented initiative. It is a non-political and human welfare oriented good for non-government organization steadfast.",
+          "badge": "Course",
+          "url": "/notice/teacher-training-program-5"
+        }
+      ]
+    },
+    {
+      "date": "August 24, 2025",
+      "items": [
+        {
+          "title": "Teacher Training Program",
+          "description": "It is a non-political and human welfare oriented initiative. It is a non-political and human welfare oriented good for non-government organization steadfast.",
+          "badge": "Course",
+          "url": "/notice/teacher-training-program-6"
+        },
+        {
+          "title": "Teacher Training Program",
+          "description": "It is a non-political and human welfare oriented initiative. It is a non-political and human welfare oriented good for non-government organization steadfast.",
+          "badge": "Course",
+          "url": "/notice/teacher-training-program-7"
+        }
+      ]
+    }
+  ],
+  "pagination": {
+    "previous": "<",
+    "next": ">",
+    "pages": [1, 2, 3, 4, 5],
+    "current": 3
+  }
 }
