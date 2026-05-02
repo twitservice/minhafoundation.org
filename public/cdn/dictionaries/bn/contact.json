@@ -2,5 +2,28 @@
   "title": "যোগাযোগ",
   "description": "মিনহা ফাউন্ডেশনে যোগাযোগ করুন",
   "meta_img": "",
-  "content": "যোগাযোগ পেজ মিনহা ফাউন্ডেশন"
+  "form": {
+    "title": "যোগাযোগ ফর্ম",
+    "name_label": "আপনার নাম *",
+    "name_placeholder": "এখানে আপনার নাম লিখুন",
+    "email_label": "ইমেইল *",
+    "email_placeholder": "এখানে আপনার ইমেইল লিখুন",
+    "subject_label": "বিষয় *",
+    "subject_placeholder": "এখানে বিষয় লিখুন",
+    "message_label": "বার্তা",
+    "message_placeholder": "এখানে আপনার বার্তা লিখুন ...",
+    "note": "অতিরিক্ত তথ্যের জন্য একটি নোট।",
+    "button": "পাঠান"
+  },
+  "location": {
+    "title": "আমাদের অবস্থান",
+    "map_image": "https://placehold.co/900x500/e5e7eb/64748b?text=Map+Preview",
+    "map_alt": "মানচিত্রে অবস্থানের প্রিভিউ",
+    "phone_label": "ফোন",
+    "phone": "+44 7578 088999",
+    "email_label": "ইমেইল",
+    "email": "minhafoundation@gmail.com",
+    "address_label": "ঠিকানা",
+    "address": "৬ ডাকেট স্ট্রিট, লন্ডন, E1 4LU, যুক্তরাজ্য"
+  }
 }

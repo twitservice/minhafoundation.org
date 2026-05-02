@@ -2,5 +2,28 @@
   "title": "Contact",
   "description": "Contact Minha Foundation",
   "meta_img": "",
-  "content": "Contact Page Minha Foundation"
+  "form": {
+    "title": "Contact Form",
+    "name_label": "Your Name *",
+    "name_placeholder": "Your name here",
+    "email_label": "Email *",
+    "email_placeholder": "Input your email here",
+    "subject_label": "Subject *",
+    "subject_placeholder": "Input subject here",
+    "message_label": "Message",
+    "message_placeholder": "Write text here ...",
+    "note": "A note for extra info.",
+    "button": "Send"
+  },
+  "location": {
+    "title": "Our Location",
+    "map_image": "https://placehold.co/900x500/e5e7eb/64748b?text=Map+Preview",
+    "map_alt": "Map location preview",
+    "phone_label": "Phone",
+    "phone": "+44 7578 088999",
+    "email_label": "Email",
+    "email": "minhafoundation@gmail.com",
+    "address_label": "Location",
+    "address": "6 Duckett Street, London, E1 4LU, United Kingdom"
+  }
 }
