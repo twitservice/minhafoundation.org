@@ -1,0 +1,11 @@
+{
+  "title": "লগইন",
+  "description": "আপনার অ্যাকাউন্টে লগইন করুন",
+  "meta_img": "",
+  "heading": "লগইন",
+  "phone_email_label": "ফোন বা ইমেইল",
+  "phone_email_placeholder": "আপনার ফোন বা ইমেইল লিখুন",
+  "button": "লগইন",
+  "image_url": "https://placehold.co/600x400/e5e7eb/64748b?text=লগইন+ছবি",
+  "image_alt": "লগইন চিত্র"
+}

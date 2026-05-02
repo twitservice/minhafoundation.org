@@ -1,0 +1,46 @@
+{
+  "title": "My Donations",
+  "description": "View your donation history",
+  "meta_img": "",
+  "heading": "Donation History",
+  "intro": "Here is a list of all your donations.",
+  "sort": {
+    "newest": "Newest First",
+    "oldest": "Oldest First"
+  },
+  "table": {
+    "transaction_no": "Transaction No",
+    "donation_time": "Donation Time",
+    "fund": "Fund",
+    "amount": "Amount",
+    "payment_method": "Payment Method",
+    "receipt": "Receipt",
+    "download_again": "Download Again"
+  },
+  "rows": [
+    {
+      "transaction_no": "TXN001",
+      "donation_time": "2023-10-01 10:00",
+      "fund": "General Fund",
+      "amount": "$100",
+      "payment_method": "Credit Card",
+      "receipt": "Download",
+      "download_again": "Download"
+    },
+    {
+      "transaction_no": "TXN002",
+      "donation_time": "2023-09-15 14:30",
+      "fund": "Education Fund",
+      "amount": "$50",
+      "payment_method": "PayPal",
+      "receipt": "Download",
+      "download_again": "Download"
+    }
+  ],
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "pages": [1, 2, 3],
+    "current": 1
+  }
+}

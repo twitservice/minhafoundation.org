@@ -1,0 +1,31 @@
+{
+  "title": "স্বেচ্ছাসেবক আবেদন",
+  "description": "মিনহা ফাউন্ডেশনে স্বেচ্ছাসেবক হিসেবে আবেদন করুন",
+  "meta_img": "",
+  "form": {
+    "title": "স্বেচ্ছাসেবক আবেদন ফর্ম",
+    "name_label": "আপনার নাম *",
+    "name_placeholder": "আপনার পুরো নাম এখানে",
+    "email_label": "ইমেইল *",
+    "email_placeholder": "আপনার ইমেইল এখানে ইনপুট করুন",
+    "phone_label": "ফোন নম্বর *",
+    "phone_placeholder": "আপনার ফোন নম্বর",
+    "interest_label": "আগ্রহের ক্ষেত্র",
+    "interest_placeholder": "আপনার আগ্রহ নির্বাচন করুন",
+    "interest_options": [
+      "শিক্ষা",
+      "স্বাস্থ্যসেবা",
+      "সম্প্রদায় উন্নয়ন",
+      "তহবিল সংগ্রহ",
+      "ইভেন্ট ব্যবস্থাপনা",
+      "অন্যান্য"
+    ],
+    "message_label": "আপনি কেন স্বেচ্ছাসেবক হতে চান?",
+    "message_placeholder": "আপনার সম্পর্কে এবং আপনার অনুপ্রেরণা সম্পর্কে বলুন...",
+    "captcha_label": "নিরাপত্তা চেক",
+    "captcha_required_message": "জমা দেওয়ার আগে নিরাপত্তা চেক সম্পূর্ণ করুন।",
+    "captcha_missing_site_key": "Cloudflare Turnstile সাইট কী অনুপস্থিত। .env-এ NEXT_PUBLIC_TURNSTILE_SITE_KEY যোগ করুন।",
+    "note": "আমরা আপনার আবেদন পর্যালোচনা করব এবং শীঘ্রই আপনার সাথে যোগাযোগ করব।",
+    "button": "আবেদন জমা দিন"
+  }
+}

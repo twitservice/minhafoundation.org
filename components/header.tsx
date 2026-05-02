@@ -67,7 +67,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                         <div className="hidden lg:flex items-center space-x-3">
                             {/* Login Icon */}
                             <a
-                                href={withSlash(`/${lang}/login`)}
+                                href={withSlash(`/${lang}/user/login`)}
                                 className="w-10 h-10 rounded-full border border-secondary-light flex items-center justify-center text-secondary-text hover:bg-secondary-light transition-colors"
                                 title={dictionary.header.login}
                             >
@@ -141,7 +141,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
                             ))}
                             <div className="pt-4 border-t border-border">
                                 <a
-                                    href={withSlash(`/${lang}/login`)}
+                                    href={withSlash(`/${lang}/user/login`)}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="flex items-center px-4 py-3 text-sm font-medium text-primary-text hover:bg-gray-100 rounded-lg"
                                 >

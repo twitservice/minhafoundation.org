@@ -1,0 +1,31 @@
+{
+  "title": "Volunteer Application",
+  "description": "Apply to volunteer with Minha Foundation",
+  "meta_img": "",
+  "form": {
+    "title": "Volunteer Application Form",
+    "name_label": "Your Name *",
+    "name_placeholder": "Your full name here",
+    "email_label": "Email *",
+    "email_placeholder": "Input your email here",
+    "phone_label": "Phone Number *",
+    "phone_placeholder": "Your phone number",
+    "interest_label": "Area of Interest",
+    "interest_placeholder": "Select your interest",
+    "interest_options": [
+      "Education",
+      "Healthcare",
+      "Community Development",
+      "Fundraising",
+      "Event Management",
+      "Other"
+    ],
+    "message_label": "Why do you want to volunteer?",
+    "message_placeholder": "Tell us about yourself and your motivation...",
+    "captcha_label": "Security Check",
+    "captcha_required_message": "Please complete the security check before submitting.",
+    "captcha_missing_site_key": "Cloudflare Turnstile site key is missing. Add NEXT_PUBLIC_TURNSTILE_SITE_KEY in .env.",
+    "note": "We will review your application and get back to you soon.",
+    "button": "Submit Application"
+  }
+}

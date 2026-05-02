@@ -1,0 +1,11 @@
+{
+  "title": "Login",
+  "description": "Login to your account",
+  "meta_img": "",
+  "heading": "Login",
+  "phone_email_label": "Phone or Email",
+  "phone_email_placeholder": "Enter your phone or email",
+  "button": "Login",
+  "image_url": "https://placehold.co/600x400/e5e7eb/64748b?text=Login+Image",
+  "image_alt": "Login illustration"
+}

@@ -1,0 +1,8 @@
+{
+  "title": "User",
+  "tabs": {
+    "login": "Login",
+    "dashboard": "Dashboard",
+    "donation": "Donation"
+  }
+}

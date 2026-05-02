@@ -1,0 +1,37 @@
+{
+  "title": "Dashboard",
+  "description": "User dashboard",
+  "meta_img": "",
+  "hero": {
+    "title": "Welcome to Your Dashboard",
+    "description": "Manage your account and donations here.",
+    "button": "View Profile"
+  },
+  "acknowledgment": {
+    "text": "Thank you for your support!",
+    "button": "Make Another Donation"
+  },
+  "profile": {
+    "name": "John Doe",
+    "id_label": "User ID",
+    "id_value": "12345",
+    "edit": "Edit Profile",
+    "stats": [
+      {
+        "label": "Total Donated",
+        "value": "$500",
+        "color": "green"
+      },
+      {
+        "label": "Projects Supported",
+        "value": "3",
+        "color": "blue"
+      },
+      {
+        "label": "Volunteer Hours",
+        "value": "20",
+        "color": "purple"
+      }
+    ]
+  }
+}

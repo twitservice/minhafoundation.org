@@ -1,0 +1,46 @@
+{
+  "title": "আমার দান",
+  "description": "আপনার দানের ইতিহাস দেখুন",
+  "meta_img": "",
+  "heading": "দানের ইতিহাস",
+  "intro": "এখানে আপনার সমস্ত দানের তালিকা।",
+  "sort": {
+    "newest": "নতুন প্রথম",
+    "oldest": "পুরানো প্রথম"
+  },
+  "table": {
+    "transaction_no": "লেনদেন নং",
+    "donation_time": "দানের সময়",
+    "fund": "তহবিল",
+    "amount": "পরিমাণ",
+    "payment_method": "পেমেন্ট পদ্ধতি",
+    "receipt": "রসিদ",
+    "download_again": "আবার ডাউনলোড করুন"
+  },
+  "rows": [
+    {
+      "transaction_no": "TXN001",
+      "donation_time": "2023-10-01 10:00",
+      "fund": "সাধারণ তহবিল",
+      "amount": "১০০ টাকা",
+      "payment_method": "ক্রেডিট কার্ড",
+      "receipt": "ডাউনলোড",
+      "download_again": "ডাউনলোড"
+    },
+    {
+      "transaction_no": "TXN002",
+      "donation_time": "2023-09-15 14:30",
+      "fund": "শিক্ষা তহবিল",
+      "amount": "৫০ টাকা",
+      "payment_method": "পেপ্যাল",
+      "receipt": "ডাউনলোড",
+      "download_again": "ডাউনলোড"
+    }
+  ],
+  "pagination": {
+    "previous": "পূর্ববর্তী",
+    "next": "পরবর্তী",
+    "pages": [1, 2, 3],
+    "current": 1
+  }
+}
