@@ -3,12 +3,13 @@ import { i18n, type Locale } from "@/lib/i18n-config";
 import { getDictionary, getCommonDictionary } from "@/lib/get-dictionary";
 import Breadcrumb from "@/components/breadcrumb";
 import { resolveMetaImg } from "@/lib/meta";
+import GalleryBrowser, { type GalleryBrowserData } from "@/components/gallery/gallery-browser";
 
 interface GalleryPageData {
   title: string;
   description: string;
-  content: string;
   meta_img?: string;
+  gallery: GalleryBrowserData;
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
@@ -72,9 +73,9 @@ export default async function GalleryPage({
   return (
     <>
       <Breadcrumb breadcrumbImg={commonDict.images.breadcrumb} breadcrumbTitle={pageData.title} />
-      <div className="min-h-screen bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <p className="text-secondary-text">{pageData.content}</p>
+      <div className="bg-background">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <GalleryBrowser data={pageData.gallery} />
         </div>
       </div>
     </>

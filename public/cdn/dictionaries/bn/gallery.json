@@ -2,5 +2,93 @@
   "title": "গ্যালারি",
   "description": "আমাদের ফটো গ্যালারি",
   "meta_img": "",
-  "content": "গ্যালারি পেজ মিনহা ফাউন্ডেশন"
+  "gallery": {
+    "tabs": {
+      "images": "ছবি",
+      "videos": "ভিডিও"
+    },
+    "images": {
+      "all_label": "সকল ছবি",
+      "categories": [
+        { "slug": "flood-relief", "name": "বন্যা" },
+        { "slug": "food-distribution", "name": "খাদ্য বিতরণ" },
+        { "slug": "winter-support", "name": "শীতবস্ত্র বিতরণ" }
+      ],
+      "items": [
+        {
+          "category_slug": "flood-relief",
+          "title": "নদীতীরে বন্যা সহায়তা বিতরণ",
+          "alt": "নদীতীরে স্বেচ্ছাসেবকদের ত্রাণ বিতরণের দৃশ্য",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Flood+Relief+01"
+        },
+        {
+          "category_slug": "flood-relief",
+          "title": "জরুরি সহায়তা গ্রহণ করছেন পরিবারগুলো",
+          "alt": "বন্যা পরিস্থিতিতে জরুরি সহায়তা গ্রহণ করছে পরিবারগুলো",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Flood+Relief+02"
+        },
+        {
+          "category_slug": "food-distribution",
+          "title": "নৌকায় খাদ্য সামগ্রী পৌঁছে দেওয়া",
+          "alt": "দুর্গম এলাকায় নৌকায় করে খাদ্যসামগ্রী পৌঁছে দেওয়া হচ্ছে",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Food+Distribution+01"
+        },
+        {
+          "category_slug": "food-distribution",
+          "title": "কমিউনিটি খাদ্য সহায়তা কর্মসূচি",
+          "alt": "স্থানীয় মানুষের হাতে খাদ্য সহায়তা তুলে দিচ্ছেন স্বেচ্ছাসেবকরা",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Food+Distribution+02"
+        },
+        {
+          "category_slug": "winter-support",
+          "title": "শীতবস্ত্র সহায়তা কর্মসূচি",
+          "alt": "কম্বল ও শীতবস্ত্র বিতরণ কার্যক্রমের দৃশ্য",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Winter+Support+01"
+        },
+        {
+          "category_slug": "winter-support",
+          "title": "অসহায় পরিবারের জন্য উষ্ণ পোশাক",
+          "alt": "অসহায় পরিবারের মধ্যে উষ্ণ পোশাক বিতরণের দৃশ্য",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Winter+Support+02"
+        }
+      ]
+    },
+    "videos": {
+      "all_label": "সকল ভিডিও",
+      "categories": [
+        { "slug": "distribution-report", "name": "বিতরণ প্রতিবেদন" },
+        { "slug": "campaign-highlights", "name": "কার্যক্রমের ঝলক" }
+      ],
+      "items": [
+        {
+          "category_slug": "distribution-report",
+          "title": "ইফতার বিতরণ প্রতিবেদন ২০২৩",
+          "alt": "ইফতার বিতরণ প্রতিবেদন ২০২৩ ভিডিওর থাম্বনেইল",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Iftar+Report+2023",
+          "video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "category_slug": "distribution-report",
+          "title": "শীতবস্ত্র বিতরণ প্রতিবেদন ২০২৩",
+          "alt": "শীতবস্ত্র বিতরণ প্রতিবেদন ২০২৩ ভিডিওর থাম্বনেইল",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Winter+Report+2023",
+          "video_url": "https://www.youtube.com/watch?v=oHg5SJYRHA0"
+        },
+        {
+          "category_slug": "campaign-highlights",
+          "title": "বার্ষিক মানবিক কার্যক্রমের সারসংক্ষেপ",
+          "alt": "বার্ষিক মানবিক কার্যক্রমের সারসংক্ষেপ ভিডিওর থাম্বনেইল",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Activities+Overview",
+          "video_url": "https://www.youtube.com/watch?v=ysz5S6PUM-U"
+        },
+        {
+          "category_slug": "campaign-highlights",
+          "title": "বন্যা জরুরি সাড়া কার্যক্রমের ঝলক",
+          "alt": "বন্যা জরুরি সাড়া কার্যক্রমের ভিডিওর থাম্বনেইল",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Flood+Highlights",
+          "video_url": "https://www.youtube.com/watch?v=jNQXAC9IVRw"
+        }
+      ]
+    }
+  }
 }

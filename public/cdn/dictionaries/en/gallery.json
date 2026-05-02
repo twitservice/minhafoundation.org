@@ -2,5 +2,93 @@
   "title": "Gallery",
   "description": "Our Photo Gallery",
   "meta_img": "",
-  "content": "Gallery Page Minha Foundation"
+  "gallery": {
+    "tabs": {
+      "images": "Images",
+      "videos": "Videos"
+    },
+    "images": {
+      "all_label": "All Images",
+      "categories": [
+        { "slug": "flood-relief", "name": "Flood Relief" },
+        { "slug": "food-distribution", "name": "Food Distribution" },
+        { "slug": "winter-support", "name": "Winter Support" }
+      ],
+      "items": [
+        {
+          "category_slug": "flood-relief",
+          "title": "Flood Relief Distribution on Riverbank",
+          "alt": "Volunteers distributing relief on a riverbank",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Flood+Relief+01"
+        },
+        {
+          "category_slug": "flood-relief",
+          "title": "Families Receiving Emergency Supplies",
+          "alt": "Families receiving emergency supplies during flood response",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Flood+Relief+02"
+        },
+        {
+          "category_slug": "food-distribution",
+          "title": "Boat Delivery of Food Packs",
+          "alt": "Food packs loaded on a boat for remote communities",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Food+Distribution+01"
+        },
+        {
+          "category_slug": "food-distribution",
+          "title": "Community Food Aid Program",
+          "alt": "Volunteers handing over food aid to local residents",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Food+Distribution+02"
+        },
+        {
+          "category_slug": "winter-support",
+          "title": "Winter Clothing Support Campaign",
+          "alt": "Winter support campaign with blanket and clothing distribution",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Winter+Support+01"
+        },
+        {
+          "category_slug": "winter-support",
+          "title": "Warm Clothes for Vulnerable Families",
+          "alt": "Distribution of warm clothes for vulnerable families",
+          "image_url": "https://placehold.co/900x600/344766/ffffff?text=Winter+Support+02"
+        }
+      ]
+    },
+    "videos": {
+      "all_label": "All Videos",
+      "categories": [
+        { "slug": "distribution-report", "name": "Distribution Report" },
+        { "slug": "campaign-highlights", "name": "Campaign Highlights" }
+      ],
+      "items": [
+        {
+          "category_slug": "distribution-report",
+          "title": "Iftar Distribution Report 2023",
+          "alt": "Thumbnail for Iftar distribution report 2023 video",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Iftar+Report+2023",
+          "video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "category_slug": "distribution-report",
+          "title": "Winter Clothes Distribution Report 2023",
+          "alt": "Thumbnail for winter clothes distribution report 2023 video",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Winter+Report+2023",
+          "video_url": "https://www.youtube.com/watch?v=oHg5SJYRHA0"
+        },
+        {
+          "category_slug": "campaign-highlights",
+          "title": "Annual Humanitarian Activities Overview",
+          "alt": "Thumbnail for annual humanitarian activities overview video",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Activities+Overview",
+          "video_url": "https://www.youtube.com/watch?v=ysz5S6PUM-U"
+        },
+        {
+          "category_slug": "campaign-highlights",
+          "title": "Flood Emergency Response Highlights",
+          "alt": "Thumbnail for flood emergency response highlights video",
+          "thumbnail_url": "https://placehold.co/900x600/344766/ffffff?text=Flood+Highlights",
+          "video_url": "https://www.youtube.com/watch?v=jNQXAC9IVRw"
+        }
+      ]
+    }
+  }
 }
