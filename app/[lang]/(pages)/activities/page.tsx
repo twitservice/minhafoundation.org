@@ -10,6 +10,7 @@ interface ActivityItem {
   image_url: string;
   badge: string;
   slug: string;
+  url: string;
 }
 
 interface ActivitiesPageData {
@@ -103,7 +104,7 @@ export default async function ActivitiesPage({
 
                   {/* Button */}
                   <Link
-                    href={`/${locale}/activities/${item.slug}`}
+                    href={`/${locale}${item.url}`}
                     className="mt-4 inline-flex w-full items-center justify-center gap-1 rounded-lg bg-[#2d6a4f] px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110"
                   >
                     {pageData.see_details}
