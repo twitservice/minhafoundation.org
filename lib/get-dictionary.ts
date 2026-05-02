@@ -60,8 +60,13 @@ export interface CommonDictionary {
   };
 }
 
-// Cache for dictionaries to avoid re-reading files
-const dictionaryCache: Record<string, unknown> = {};
+interface DictionaryCacheEntry {
+  mtimeMs: number;
+  data: unknown;
+}
+
+// Cache for dictionaries to avoid re-reading unchanged files
+const dictionaryCache: Record<string, DictionaryCacheEntry> = {};
 
 /**
  * Generic dictionary loader for page-specific JSON files.
@@ -81,16 +86,22 @@ export async function getDictionary<T>(
   page: string
 ): Promise<T> {
   const cacheKey = `${locale}/${page}`;
-  
-  if (dictionaryCache[cacheKey]) {
-    return dictionaryCache[cacheKey] as T;
-  }
 
   const filePath = path.join(process.cwd(), 'public', 'cdn', 'dictionaries', locale, `${page}.json`);
+  const { mtimeMs } = fs.statSync(filePath);
+  const cachedEntry = dictionaryCache[cacheKey];
+
+  if (cachedEntry && cachedEntry.mtimeMs === mtimeMs) {
+    return cachedEntry.data as T;
+  }
+
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const dictionary = JSON.parse(fileContents) as T;
 
-  dictionaryCache[cacheKey] = dictionary;
+  dictionaryCache[cacheKey] = {
+    mtimeMs,
+    data: dictionary,
+  };
 
   return dictionary;
 }
