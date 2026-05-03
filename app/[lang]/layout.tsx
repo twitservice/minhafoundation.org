@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { i18n, type Locale } from "@/lib/i18n-config";
 import { getCommonDictionary } from "@/lib/get-dictionary";
 import Header from "@/components/header";
@@ -8,6 +8,14 @@ import SubscriberSection from "@/components/home/subscriber-section";
 
 // Base URL for canonical/hreflang (set in env or hardcode)
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://minhafoundation.org';
+
+// Viewport configuration for mobile optimization
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 
 // Generate static params for all locales
 export async function generateStaticParams() {
