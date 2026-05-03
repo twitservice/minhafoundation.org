@@ -1,4 +1,5 @@
 import { getCommonDictionary, getDictionary } from "@/lib/get-dictionary";
+import type { Metadata } from "next";
 import type { Locale } from "@/lib/i18n-config";
 import Breadcrumb from "@/components/breadcrumb";
 import ConnectTabs, { type ConnectTabItem } from "@/components/connect/connect-tabs";
@@ -12,6 +13,26 @@ interface ConnectLayoutData {
     member: string;
     voluntar: string;
     career: string;
+  };
+}
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://minhafoundation.org";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  const [connectData, commonDict] = await Promise.all([
+    getDictionary<ConnectLayoutData>(locale, "connect"),
+    getCommonDictionary(locale),
+  ]);
+
+  return {
+    title: connectData.title,
+    description: connectData.description,
   };
 }
 

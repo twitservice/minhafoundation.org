@@ -24,21 +24,19 @@ const nextConfig: NextConfig = {
 
     //   // Local backend for development
     //   // {
-    //   //   protocol: "http",
-    //   //   hostname: "localhost",
-    //   //   port: "8000",
-    //   //   pathname: "/storage/**",
-    //   // },
+    //     protocol: "http",
+    //     hostname: "localhost",
+    //     port: "8000",
+    //     pathname: "/storage/**",
+    //   },
     //   // Add your production backend domain when deployed
     //   // {
-    //   //   protocol: "https",
-    //   //   hostname: "your-production-domain.com",
-    //   //   pathname: "/storage/**",
-    //   // },
+    //     protocol: "https",
+    //     hostname: "your-production-domain.com",
+    //     pathname: "/storage/**",
+    //   },
     // ],
   },
-
-
 };
 
 export default nextConfig;
