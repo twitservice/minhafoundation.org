@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: .
+        working-directory: ./frontend
 
     steps:
       # 1️⃣ Checkout the repo
@@ -37,8 +37,8 @@ jobs:
         with:
           path: |
             ~/.pnpm-store
-            node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+            frontend/node_modules
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('frontend/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
@@ -54,10 +54,12 @@ jobs:
 
       # 6️⃣ Install dependencies using pnpm
       - name: Install dependencies
+        working-directory: ./frontend
         run: pnpm install
 
       # 7️⃣ Build Next.js static site
       - name: Build Next.js static site
+        working-directory: ./frontend
         run: pnpm build && ls -la
 
       # 8️⃣ Deploy to Cloudflare Pages
@@ -67,5 +69,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: "minhafoundation-org-next-js"  # your Cloudflare Pages project name
-          directory: out
+          directory: frontend/out
           wranglerVersion: 2
